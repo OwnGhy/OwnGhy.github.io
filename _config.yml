@@ -79,7 +79,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  reop: https://github.com/OwnGhy/OwnGhy.github.io
+  repo: https://github.com/OwnGhy/OwnGhy.github.io
   branch: master
   name: OwnGhy
   email: 919986426@qq.com
