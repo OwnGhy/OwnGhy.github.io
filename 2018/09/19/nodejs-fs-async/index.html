@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。 有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
+<meta name="description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
 <meta name="keywords" content="Nodejs,async&#x2F;await">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对fs异步读取文件的理解">
 <meta property="og:url" content="http://ownghy.github.io/2018/09/19/nodejs-fs-async/index.html">
 <meta property="og:site_name" content="Sycamore">
-<meta property="og:description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。 有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
+<meta property="og:description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-20T02:27:08.226Z">
+<meta property="og:updated_time" content="2018-09-20T09:48:59.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对fs异步读取文件的理解">
-<meta name="twitter:description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。 有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
+<meta name="twitter:description" content="在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。">
 
 
 
@@ -375,8 +375,7 @@
       
 
       
-        <p>在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。</p>
-<p>有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。<br><a id="more"></a></p>
+        <p>在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。<br>有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。<br><a id="more"></a></p>
 <h2 id="同步读取"><a href="#同步读取" class="headerlink" title="同步读取"></a>同步读取</h2><p>首先使用同步的方法，很简单的可以实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const getFileOfDirSync = (dir) =&gt; &#123;</span><br><span class="line">    let files = fs.readdirSync(dir);</span><br><span class="line">    let result;</span><br><span class="line"></span><br><span class="line">    if (files) &#123;</span><br><span class="line">        result = files.map((file) =&gt; &#123;</span><br><span class="line">            let filePath = path.join(dir, file);</span><br><span class="line">            if (fs.statSync(filePath).isDirectory()) &#123;</span><br><span class="line">                return getFileOfDirSync(filePath);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return filePath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // deepFlatten()是平铺数组的方法</span><br><span class="line">    return deepFlatten(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>同步的逻辑很简单，每一个步骤都等上一步执行完再执行，没多大问题。</p>
 <p>那么使用异步如何实现呢？</p>
