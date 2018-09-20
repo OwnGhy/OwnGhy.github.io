@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -39,7 +39,7 @@
 
   
   
-  <link href="./lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -73,9 +73,9 @@
 
 
 
-<link href="./lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="./css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Hexo, NexT" />
@@ -87,7 +87,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=5.1.2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -112,7 +112,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -212,6 +212,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -264,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2018/09/19/test/">
+    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2018/09/19/nodejs-fs-async/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="OwnGhy">
@@ -283,7 +293,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/09/19/test/" itemprop="url">对fs异步读取文件的理解</a></h1>
+                <a class="post-title-link" href="/2018/09/19/nodejs-fs-async/" itemprop="url">对fs异步读取文件的理解</a></h1>
         
 
         <div class="post-meta">
@@ -306,141 +316,40 @@
           </span>
 
           
-
-          
+            <span class="post-category" >
             
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。</p>
-<p>有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。</p>
-<h2 id="同步读取"><a href="#同步读取" class="headerlink" title="同步读取"></a>同步读取</h2><p>首先使用同步的方法，很简单的可以实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const getFileOfDirSync = (dir) =&gt; &#123;</span><br><span class="line">    let files = fs.readdirSync(dir);</span><br><span class="line">    let result;</span><br><span class="line"></span><br><span class="line">    if (files) &#123;</span><br><span class="line">        result = files.map((file) =&gt; &#123;</span><br><span class="line">            let filePath = path.join(dir, file);</span><br><span class="line">            if (fs.statSync(filePath).isDirectory()) &#123;</span><br><span class="line">                return getFileOfDirSync(filePath);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return filePath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // deepFlatten()是平铺数组的方法</span><br><span class="line">    return deepFlatten(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>同步的逻辑很简单，每一个步骤都等上一步执行完再执行，没多大问题。</p>
-<p>那么使用异步如何实现呢？</p>
-<h2 id="异步读取错误示范"><a href="#异步读取错误示范" class="headerlink" title="异步读取错误示范"></a>异步读取错误示范</h2><p>首先我想到的是，使用async/await去控制异步读取fs.readdir()的执行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const getFileOfDirAsync = async (dir) =&gt; &#123;</span><br><span class="line">    let files = await fs.readdir(dir);</span><br><span class="line">    let result;</span><br><span class="line"></span><br><span class="line">    if (files) &#123;</span><br><span class="line">        result = files.map(file =&gt; &#123;</span><br><span class="line">            let filePath = path.join(dir, file);</span><br><span class="line">            // 为了集中处理读取dir，这里使用同步的fs.statSync()</span><br><span class="line">            if (fs.statSync(filePath).isDirectory()) &#123;</span><br><span class="line">                return getFileOfDirAsync(filePath);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return filePath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return deepFlatten(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>duang～报错～<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DeprecationWarning: Calling an asynchronous function without callback is deprecated.</span><br></pre></td></tr></table></figure></p>
-<p>这里报错的原因是：nodejs的fs模块的方法都没有返回promise。当然不能使用async/await进行处理。</p>
-<p>在nodejs的fs模块的源码中，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function readdir(path, options, callback) &#123;</span><br><span class="line">  callback = makeCallback(typeof options === &apos;function&apos; ? options : callback);</span><br><span class="line">  options = getOptions(options, &#123;&#125;);</span><br><span class="line">  path = toPathIfFileURL(path);</span><br><span class="line">  validatePath(path);</span><br><span class="line"></span><br><span class="line">  const req = new FSReqCallback();</span><br><span class="line">  if (!options.withFileTypes) &#123;</span><br><span class="line">    req.oncomplete = callback;</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    req.oncomplete = (err, result) =&gt; &#123;</span><br><span class="line">      if (err) &#123;</span><br><span class="line">        callback(err);</span><br><span class="line">        return;</span><br><span class="line">      &#125;</span><br><span class="line">      getDirents(path, result, callback);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  binding.readdir(pathModule.toNamespacedPath(path), options.encoding,</span><br><span class="line">                  !!options.withFileTypes, req);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function readdirSync(path, options) &#123;</span><br><span class="line">  options = getOptions(options, &#123;&#125;);</span><br><span class="line">  path = toPathIfFileURL(path);</span><br><span class="line">  validatePath(path);</span><br><span class="line">  const ctx = &#123; path &#125;;</span><br><span class="line">  const result = binding.readdir(pathModule.toNamespacedPath(path),</span><br><span class="line">                                 options.encoding, !!options.withFileTypes,</span><br><span class="line">                                 undefined, ctx);</span><br><span class="line">  handleErrorFromBinding(ctx);</span><br><span class="line">  return options.withFileTypes ? getDirents(path, result) : result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>fs模块的readdir()和readdirSync()方法的核心区别是：readdirSync()方法直接返回的是通过binding.readdir()方法读取的结果。而readdir()方法则未返回任何值，只是将callback作为FSReqCallback对象onComplete方法，表示再读取成功之后再执行callback方法，从何获取到返回的读取内容。</p>
-<p>可以看到fs.readdir()方法并没有返回promise，直接用await去修饰fs.readdir()方法，并不会同步化该方法中通过I/O去异步读取文件信息的操作，这样的做法毫无意义。</p>
-<p>所以，如何正确的使用异步读取的方法？</p>
-<h2 id="将fs-readdir-方法promise化"><a href="#将fs-readdir-方法promise化" class="headerlink" title="将fs.readdir()方法promise化"></a>将fs.readdir()方法promise化</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">const promisify = function (nodeFunction) &#123;</span><br><span class="line">    return function(...args) &#123;</span><br><span class="line">        return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">            nodeFunction.call(this, ...args, (err, data) =&gt; &#123;</span><br><span class="line">                if(err) &#123;</span><br><span class="line">                    reject(err);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    resolve(data);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// promise化异步读取方法</span><br><span class="line">const readDir = promisify(fs.readdir);</span><br><span class="line">const fileStat = promisify(fs.stat);</span><br><span class="line"></span><br><span class="line">const getFilesPath = async (dir) =&gt; &#123;</span><br><span class="line">    let files = await readDir(dir);</span><br><span class="line"></span><br><span class="line">    let result = files.map(file =&gt; &#123;</span><br><span class="line">        let filePath = path.join(dir, file);</span><br><span class="line">        return fileStat(filePath).then(stat =&gt; &#123;</span><br><span class="line">            if (stat.isDirectory()) &#123;</span><br><span class="line">                return getFilesPath(filePath);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return filePath;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    return deepFlatten(await Promise.all(result));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>通过将fs.readdir()方法的返回promise化，这样就可以使用async/await了。</p>
-<h2 id="关于使用async-await意义的思考"><a href="#关于使用async-await意义的思考" class="headerlink" title="关于使用async/await意义的思考"></a>关于使用async/await意义的思考</h2><p>使用async/await事实上将后续的操作阻塞了，需要等到readDir执行完之后再进行其他操作，那么这里的和同步没有实质上的区别，反而还多了很多操作，所以单单就readDir这里来说，将其promise化再使用async/await是无意义的。</p>
-<p>但是这里在读取到files进行map的时候，里面的fs.stat()异步化，使用async/await是有意义的。这样可以不必等到操作完了在进入下一次遍历，有利于提升效率。</p>
-<p>另外：推荐一篇讲异步递归的文章<a href="https://zhuanlan.zhihu.com/p/29534555" target="_blank" rel="noopener">【译】异步递归：回调、Promise、Async</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2018/09/19/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OwnGhy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sycamore">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/19/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <span class="post-meta-divider">|</span>
             
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">分类于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T15:51:53+08:00">
-                2018-09-19
-              </time>
-            
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Nodejs/" itemprop="url" rel="index">
+                    <span itemprop="name">Nodejs</span>
+                  </a>
+                </span>
 
-            
+                
+                
+              
+            </span>
+          
 
+          
+            <span class="post-tags">
             
-          </span>
-
+              <span class="post-meta-divider">|</span>
+            
+            
+              <a href="/tags/Nodejs/" rel="tag"><i class="fa fa-bookmark"></i> Nodejs</a>
+            
+              <a href="/tags/async-await/" rel="tag"><i class="fa fa-bookmark"></i> async/await</a>
+            
+            </span>
           
 
           
@@ -470,18 +379,15 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          <p>在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。</p>
+<p>有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/19/nodejs-fs-async/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -496,8 +402,6 @@
     
 
     <footer class="post-footer">
-      
-
       
 
       
@@ -561,12 +465,21 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -631,7 +544,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -681,46 +594,53 @@
 
 
   
-  <script type="text/javascript" src="./lib/jquery/index.js?v=2.1.3"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="./lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="./lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="./lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="./lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="./lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
-
-  
-
-
-  <script type="text/javascript" src="./js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="./js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-  
-    <script type="text/javascript" src="./js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="./js/src/post-details.js?v=5.1.2"></script>
-
-  
 
   
 
 
-  <script type="text/javascript" src="./js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
