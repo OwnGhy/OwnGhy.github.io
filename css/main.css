@@ -1543,7 +1543,8 @@ pre .javascript .function {
 .posts-expand .post-tags a {
   display: inline-block;
   margin-right: 10px;
-  font-size: 13px;
+  font-size: 12px;
+  border-bottom: none !important;
 }
 .post-nav {
   display: table;
