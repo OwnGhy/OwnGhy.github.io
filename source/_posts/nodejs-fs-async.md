@@ -12,7 +12,7 @@ tags:
 <!-- more -->
 ## 同步读取
 首先使用同步的方法，很简单的可以实现：
-```
+```javascript
 const getFileOfDirSync = (dir) => {
     let files = fs.readdirSync(dir);
     let result;
@@ -38,7 +38,7 @@ const getFileOfDirSync = (dir) => {
 
 ## 异步读取错误示范
 首先我想到的是，使用async/await去控制异步读取fs.readdir()的执行。
-```
+```javascript
 const getFileOfDirAsync = async (dir) => {
     let files = await fs.readdir(dir);
     let result;
@@ -67,7 +67,7 @@ DeprecationWarning: Calling an asynchronous function without callback is depreca
 这里报错的原因是：nodejs的fs模块的方法都没有返回promise。当然不能使用async/await进行处理。
 
 在nodejs的fs模块的源码中，如下：
-```
+```javascript
 function readdir(path, options, callback) {
   callback = makeCallback(typeof options === 'function' ? options : callback);
   options = getOptions(options, {});
@@ -109,7 +109,7 @@ fs模块的readdir()和readdirSync()方法的核心区别是：readdirSync()方�
 所以，如何正确的使用异步读取的方法？
 
 ## 将fs.readdir()方法promise化
-```
+```javascript
 const promisify = function (nodeFunction) {
     return function(...args) {
         return new Promise((resolve, reject) => {
