@@ -11,7 +11,7 @@ tags:
 由于`redux`与`dva`的出现，在React开发时使用`dva`进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。
 
 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即`jsx`中的`<div>`这样的元素）。
-
+<!-- more -->
 当render过程到了叶子节点，即React元素的时候，`diff`过程才开始进行计算，这时候`diff`算法会决定是否切实更新DOM元素。
 
 > 注意： diff发生在render之后.
