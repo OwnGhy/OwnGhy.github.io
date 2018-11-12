@@ -33,13 +33,16 @@ Redux使用一个对象存储整个应用的状态(`global state`)，当`global 
 
 Redux将React组件分为容器型组件和展示型组件。
 
-##### 容器组件
+**容器组件**
+
 容器型组件一般通过`connet`函数生成，它订阅了全局状态的变化，通过`mapStateToProps`函数，我们可以对全局状态进行过滤，只返回该容器型组件关注的局部状态。
 
 每一次全局状态变化都会调用所有容器型组件的`mapStateToProps`方法，该方法返回一个常规的Javascript对象，并将其合并到容器型组件的props上。
 
-##### 展示组件
+**展示组件**
+
 展示型组件不直接从global state获取数据，其数据来源于父组件。当容器型组件对应global state有变化时，它会将变化传播到其所有的子组件(一般为展示型组件)。
+
 
 ### Redux内部的默认性能优化
 Redux官方API函数`connect生`成的容器型组件，默认会提供一个`shouldComponentUpdate`函数，其中对props和state进行了浅层比较
