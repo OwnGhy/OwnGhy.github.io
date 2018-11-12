@@ -24,6 +24,32 @@ My git pages by hexo!
 	```
 	直接复制已有文章md文件，修改头部信息即可。
 
+	或者使用命令行创建新博客
+	```
+	hexo new [layout] <title>
+	```
+
+* 生存静态文件
+```
+hexo generate
+// 简写
+hexo g
+```
+| 选项          | 描述          |
+| ------------- |:-------------:|
+| `-d`,`--deploy`| 文件生成后立即部署网站 |
+| `-w`,`--watch`      | 监视文件变动      |
+
+* 发布草稿
+```
+hexo publish [layout] <filename>
+```
+* 部署
+```
+hexo deploy
+// 简写
+hexo d
+```
 
 ## 博客规范
 头部“---”行以前的部分为博文信息定义部分
