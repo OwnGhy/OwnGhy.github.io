@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -37,36 +49,7 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
 
 
 
@@ -75,37 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="React," />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
 
 
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
-<meta name="description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
-<meta name="keywords" content="React">
-<meta property="og:type" content="article">
-<meta property="og:title" content="React父组件render引起子组件render">
-<meta property="og:url" content="http://ownghy.github.io/2018/11/12/react-render-by-father/index.html">
-<meta property="og:site_name" content="Sycamore">
-<meta property="og:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-12T06:18:14.558Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="React父组件render引起子组件render">
-<meta name="twitter:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
+
+
+
 
 
 
@@ -113,15 +84,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    scheme: 'Muse',
+    version: '6.5.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -133,12 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React父组件render引起子组件render">
+<meta property="og:url" content="http://ownghy.github.io/2018/11/12/react-render-by-father/index.html">
+<meta property="og:site_name" content="Sycamore">
+<meta property="og:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-12T08:04:20.614Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React父组件render引起子组件render">
+<meta name="twitter:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
+
+
+
+
+
 
   <link rel="canonical" href="http://ownghy.github.io/2018/11/12/react-render-by-father/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>React父组件render引起子组件render | Sycamore</title>
   
@@ -153,8 +149,32 @@
 
 
 
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
@@ -165,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -174,19 +194,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Sycamore</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -194,55 +212,55 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Archives</a>
+
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -250,12 +268,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -268,6 +294,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -277,8 +305,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="OwnGhy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4">
+      <meta itemprop="description" content="记录自己平时的一些学习笔记，勤能补拙，通过自己的记录和总结，成为一个独当一面的全栈开发。">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -290,25 +318,38 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">React父组件render引起子组件render</h1>
+          <h1 class="post-title" itemprop="name headline">React父组件render引起子组件render
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T14:14:21+08:00">
-                2018-11-12
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2018-11-12 14:14:21 / Modified: 16:04:20" itemprop="dateCreated datePublished" datetime="2018-11-12T14:14:21+08:00">2018-11-12</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -321,29 +362,14 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">分类于</span>
+                <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/React/" itemprop="url" rel="index">
-                    <span itemprop="name">React</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
 
                 
                 
               
-            </span>
-          
-
-          
-            <span class="post-tags">
-            
-              <span class="post-meta-divider">|</span>
-            
-            
-              <a href="/tags/React/" rel="tag"><i class="fa fa-bookmark"></i> React</a>
-            
             </span>
           
 
@@ -390,9 +416,11 @@
 <p><code>PureComponent</code>顾名思义是纯组件，<code>PureComponent</code>是优化 React 应用程序最重要的方法之一，在其内部React 自动帮我们做了一层浅比较，减少了手动写<code>shouldComponentUpdate</code>函数，当组件更新时，如果组件的props和state 都没发生改变render方法就不会触发，省去<code>Virtual DOM</code>的生成和比对过程，达到提升性能的目的。</p>
 <h3 id="Redux状态传播路径"><a href="#Redux状态传播路径" class="headerlink" title="Redux状态传播路径"></a>Redux状态传播路径</h3><p>Redux使用一个对象存储整个应用的状态(<code>global state</code>)，当<code>global state</code>发生改变引起的状态传递是理解基于redux的react应用的渲染性能优化的重点。</p>
 <p>Redux将React组件分为容器型组件和展示型组件。</p>
-<h5 id="容器组件"><a href="#容器组件" class="headerlink" title="容器组件"></a>容器组件</h5><p>容器型组件一般通过<code>connet</code>函数生成，它订阅了全局状态的变化，通过<code>mapStateToProps</code>函数，我们可以对全局状态进行过滤，只返回该容器型组件关注的局部状态。</p>
+<p><strong>容器组件</strong></p>
+<p>容器型组件一般通过<code>connet</code>函数生成，它订阅了全局状态的变化，通过<code>mapStateToProps</code>函数，我们可以对全局状态进行过滤，只返回该容器型组件关注的局部状态。</p>
 <p>每一次全局状态变化都会调用所有容器型组件的<code>mapStateToProps</code>方法，该方法返回一个常规的Javascript对象，并将其合并到容器型组件的props上。</p>
-<h5 id="展示组件"><a href="#展示组件" class="headerlink" title="展示组件"></a>展示组件</h5><p>展示型组件不直接从global state获取数据，其数据来源于父组件。当容器型组件对应global state有变化时，它会将变化传播到其所有的子组件(一般为展示型组件)。</p>
+<p><strong>展示组件</strong></p>
+<p>展示型组件不直接从global state获取数据，其数据来源于父组件。当容器型组件对应global state有变化时，它会将变化传播到其所有的子组件(一般为展示型组件)。</p>
 <h3 id="Redux内部的默认性能优化"><a href="#Redux内部的默认性能优化" class="headerlink" title="Redux内部的默认性能优化"></a>Redux内部的默认性能优化</h3><p>Redux官方API函数<code>connect生</code>成的容器型组件，默认会提供一个<code>shouldComponentUpdate</code>函数，其中对props和state进行了浅层比较</p>
 <p>参考：</p>
 <p><a href="https://segmentfault.com/q/1010000011289209/a-1020000011289904" target="_blank" rel="noopener">react父组件更新会 导致子组件更新吗</a></p>
@@ -401,17 +429,31 @@
 
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag"># React</a>
+          
+        </div>
+      
+
       
       
       
@@ -444,21 +486,14 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
+  
 
-          
-  <div class="comments" id="comments">
-    
-  </div>
 
 
         </div>
@@ -481,75 +516,89 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4"
-               alt="OwnGhy" />
-          <p class="site-author-name" itemprop="name">OwnGhy</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">OwnGhy</p>
               <p class="site-description motion-element" itemprop="description">记录自己平时的一些学习笔记，勤能补拙，通过自己的记录和总结，成为一个独当一面的全栈开发。</p>
+          </div>
+
           
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
         </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -562,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#父组件render引起子组件render"><span class="nav-number">1.</span> <span class="nav-text">父组件render引起子组件render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何防止不必要的子组件render？"><span class="nav-number">2.</span> <span class="nav-text">如何防止不必要的子组件render？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux状态传播路径"><span class="nav-number">3.</span> <span class="nav-text">Redux状态传播路径</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#容器组件"><span class="nav-number">3.0.1.</span> <span class="nav-text">容器组件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#展示组件"><span class="nav-number">3.0.2.</span> <span class="nav-text">展示组件</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux内部的默认性能优化"><span class="nav-number">4.</span> <span class="nav-text">Redux内部的默认性能优化</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#父组件render引起子组件render"><span class="nav-number">1.</span> <span class="nav-text">父组件render引起子组件render</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何防止不必要的子组件render？"><span class="nav-number">2.</span> <span class="nav-text">如何防止不必要的子组件render？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux状态传播路径"><span class="nav-number">3.</span> <span class="nav-text">Redux状态传播路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Redux内部的默认性能优化"><span class="nav-number">4.</span> <span class="nav-text">Redux内部的默认性能优化</span></a></li></ol></div>
             
 
           </div>
@@ -582,30 +631,39 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">OwnGhy</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.7.1</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.5.0</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -618,6 +676,11 @@
       </div>
     
 
+    
+	
+    
+
+    
   </div>
 
   
@@ -636,7 +699,6 @@
 
 
 
-  
 
 
 
@@ -649,66 +711,62 @@
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
   
   
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
 
   
 
 
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
-	
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
 
 
 
@@ -722,16 +780,16 @@
 
   
 
-
-
-
-
+  
 
   
 
+  
 
+  
 
-
+  
+  
 
   
 
