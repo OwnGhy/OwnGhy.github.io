@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。 当render">
+<meta name="description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
 <meta name="keywords" content="React">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React父组件render引起子组件render">
 <meta property="og:url" content="http://ownghy.github.io/2018/11/12/react-render-by-father/index.html">
 <meta property="og:site_name" content="Sycamore">
-<meta property="og:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。 当render">
+<meta property="og:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-12T06:15:38.552Z">
+<meta property="og:updated_time" content="2018-11-12T06:18:14.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React父组件render引起子组件render">
-<meta name="twitter:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。 当render">
+<meta name="twitter:description" content="父组件render引起子组件render由于redux与dva的出现，在React开发时使用dva进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。 父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即jsx中的&amp;lt;div&amp;gt;这样的元素）。">
 
 
 
@@ -374,8 +374,7 @@
 
       
         <h3 id="父组件render引起子组件render"><a href="#父组件render引起子组件render" class="headerlink" title="父组件render引起子组件render"></a>父组件render引起子组件render</h3><p>由于<code>redux</code>与<code>dva</code>的出现，在React开发时使用<code>dva</code>进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。</p>
-<p>父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即<code>jsx</code>中的<code>&lt;div&gt;</code>这样的元素）。</p>
-<p>当render过程到了叶子节点，即React元素的时候，<code>diff</code>过程才开始进行计算，这时候<code>diff</code>算法会决定是否切实更新DOM元素。</p>
+<p>父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即<code>jsx</code>中的<code>&lt;div&gt;</code>这样的元素）。<br><a id="more"></a><br>当render过程到了叶子节点，即React元素的时候，<code>diff</code>过程才开始进行计算，这时候<code>diff</code>算法会决定是否切实更新DOM元素。</p>
 <blockquote>
 <p>注意： diff发生在render之后.</p>
 </blockquote>
