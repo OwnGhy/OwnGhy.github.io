@@ -109,14 +109,14 @@
 
 
   <meta name="description" content="从零搭建一个vue项目最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。 由于是真的从零开始，所以长文预警！！！😂">
-<meta name="keywords" content="webpack, vue">
+<meta name="keywords" content="webpack,vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack探索---从零搭建一个vue项目">
 <meta property="og:url" content="http://ownghy.github.io/2019/07/09/webpack探索-从零搭建一个vue项目/index.html">
 <meta property="og:site_name" content="Sycamore">
 <meta property="og:description" content="从零搭建一个vue项目最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。 由于是真的从零开始，所以长文预警！！！😂">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-09T10:14:54.967Z">
+<meta property="og:updated_time" content="2019-07-09T10:18:27.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack探索---从零搭建一个vue项目">
 <meta name="twitter:description" content="从零搭建一个vue项目最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。 由于是真的从零开始，所以长文预警！！！😂">
@@ -377,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-07-09 18:08:31 / 修改时间：18:14:54" itemprop="dateCreated datePublished" datetime="2019-07-09T18:08:31+08:00">2019-07-09</time>
+              <time title="创建时间：2019-07-09 18:08:31 / 修改时间：18:18:27" itemprop="dateCreated datePublished" datetime="2019-07-09T18:08:31+08:00">2019-07-09</time>
             
 
             
@@ -387,6 +387,24 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -426,7 +444,8 @@
 
       
         <h1 id="从零搭建一个vue项目"><a href="#从零搭建一个vue项目" class="headerlink" title="从零搭建一个vue项目"></a>从零搭建一个vue项目</h1><p>最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。</p>
-<p><code>由于是真的从零开始，所以长文预警！！！😂</code><br><a id="more"></a></p>
+<p><code>由于是真的从零开始，所以长文预警！！！😂</code></p>
+<a id="more"></a>
 <h2 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h2><p>首先☝️，在命令行中创建文件夹并进入，使用npm命令初始化项目：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir vue-starter &amp;&amp; <span class="built_in">cd</span> vue-starter</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
 <p>然后，创建index.html：</p>
@@ -633,7 +652,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/webpack-vue/" rel="tag"># webpack, vue</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
         </div>
       
@@ -752,7 +773,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -773,7 +796,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

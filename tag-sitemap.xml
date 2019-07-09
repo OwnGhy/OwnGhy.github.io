@@ -23,8 +23,15 @@
     </url>
 
     <url>
-        <loc>http://ownghy.github.io/tags/webpack-vue/</loc>
-        <lastmod>2019-07-09T10:14:54.967Z</lastmod>
+        <loc>http://ownghy.github.io/tags/webpack/</loc>
+        <lastmod>2019-07-09T10:18:27.640Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://ownghy.github.io/tags/vue/</loc>
+        <lastmod>2019-07-09T10:18:27.640Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
