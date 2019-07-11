@@ -108,24 +108,36 @@
 
 
 
-  <meta name="description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
-<meta name="keywords" content="前端, 学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sycamore">
-<meta property="og:url" content="http://ownghy.github.io/index.html">
+  <meta name="description" content="在上一篇文章中，从零搭建一个项目，主要记录一些基本的配置。但是并没有重视打包构建方面的优化，由于自己用上一篇文章的配置开发的一个项目后打包后的文件过大导致项目运行速度也很低，所以今天着重学习一下一些打包的概念和优化配置。  创建项目&amp;amp;基本的打包配置初始化项目、安装依赖： 1234mkdir webpack-build-enhancecd webpack-build-enhancenpm i">
+<meta name="keywords" content="webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack探索---打包优化">
+<meta property="og:url" content="http://ownghy.github.io/2019/07/11/webpack-enhance/index.html">
 <meta property="og:site_name" content="Sycamore">
-<meta property="og:description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
+<meta property="og:description" content="在上一篇文章中，从零搭建一个项目，主要记录一些基本的配置。但是并没有重视打包构建方面的优化，由于自己用上一篇文章的配置开发的一个项目后打包后的文件过大导致项目运行速度也很低，所以今天着重学习一下一些打包的概念和优化配置。  创建项目&amp;amp;基本的打包配置初始化项目、安装依赖： 1234mkdir webpack-build-enhancecd webpack-build-enhancenpm i">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer1.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer1.1.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer1.2.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer1.3.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer2.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer3.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer4.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer6.1.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer5.png">
+<meta property="og:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer6.2.png">
+<meta property="og:updated_time" content="2019-07-11T02:19:37.602Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sycamore">
-<meta name="twitter:description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
+<meta name="twitter:title" content="webpack探索---打包优化">
+<meta name="twitter:description" content="在上一篇文章中，从零搭建一个项目，主要记录一些基本的配置。但是并没有重视打包构建方面的优化，由于自己用上一篇文章的配置开发的一个项目后打包后的文件过大导致项目运行速度也很低，所以今天着重学习一下一些打包的概念和优化配置。  创建项目&amp;amp;基本的打包配置初始化项目、安装依赖： 1234mkdir webpack-build-enhancecd webpack-build-enhancenpm i">
+<meta name="twitter:image" content="http://ownghy.github.io/2019/07/11/assets/JS构建、转译/analyzer1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://ownghy.github.io/"/>
+  <link rel="canonical" href="http://ownghy.github.io/2019/07/11/webpack-enhance/"/>
 
 
 
@@ -135,7 +147,7 @@
   };
 </script>
 
-  <title>Sycamore</title>
+  <title>webpack探索---打包优化 | Sycamore</title>
   
 
 
@@ -184,8 +196,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -222,7 +233,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -318,9 +329,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -352,10 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/11/webpack-enhance/" class="post-title-link" itemprop="http://ownghy.github.io/index.html">webpack探索---打包优化</a>
+          <h1 class="post-title" itemprop="name headline">webpack探索---打包优化
               
             
           </h1>
@@ -412,6 +420,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/07/11/webpack-enhance/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2019/07/11/webpack-enhance/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -436,9 +454,7 @@
       
 
       
-        
-          
-            <p>在上一篇文章中，<a href="https://juejin.im/post/5cc580215188257feb01cad8" target="_blank" rel="noopener">从零搭建一个项目</a>，主要记录一些基本的配置。但是并没有重视打包构建方面的优化，由于自己用上一篇文章的配置开发的一个项目后打包后的文件过大导致项目运行速度也很低，所以今天着重学习一下一些打包的概念和优化配置。</p>
+        <p>在上一篇文章中，<a href="https://juejin.im/post/5cc580215188257feb01cad8" target="_blank" rel="noopener">从零搭建一个项目</a>，主要记录一些基本的配置。但是并没有重视打包构建方面的优化，由于自己用上一篇文章的配置开发的一个项目后打包后的文件过大导致项目运行速度也很低，所以今天着重学习一下一些打包的概念和优化配置。</p>
 <!-- moew -->
 <h2 id="创建项目-amp-基本的打包配置"><a href="#创建项目-amp-基本的打包配置" class="headerlink" title="创建项目&amp;基本的打包配置"></a>创建项目&amp;基本的打包配置</h2><p>初始化项目、安装依赖：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir webpack-build-enhance</span><br><span class="line">cd webpack-build-enhance</span><br><span class="line">npm init</span><br><span class="line">npm i -D webpack webpack-cli cross-env</span><br></pre></td></tr></table></figure>
@@ -556,8 +572,6 @@
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>代码分离：<a href="https://webpack.docschina.org/guides/code-splitting/" target="_blank" rel="noopener">https://webpack.docschina.org/guides/code-splitting/</a></p>
 <p>DLL：<a href="https://webpack.docschina.org/plugins/dll-plugin/" target="_blank" rel="noopener">https://webpack.docschina.org/plugins/dll-plugin/</a></p>
 
-          
-        
       
     </div>
 
@@ -578,372 +592,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2019/07/09/webpack探索-从零搭建一个vue项目/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OwnGhy">
-      <meta itemprop="description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sycamore">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/09/webpack探索-从零搭建一个vue项目/" class="post-title-link" itemprop="http://ownghy.github.io/index.html">webpack探索---从零搭建一个vue项目</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-09 18:08:31" itemprop="dateCreated datePublished" datetime="2019-07-09T18:08:31+08:00">2019-07-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 10:17:55" itemprop="dateModified" datetime="2019-07-11T10:17:55+08:00">2019-07-11</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/webpack/" itemprop="url" rel="index"><span itemprop="name">webpack</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="从零搭建一个vue项目"><a href="#从零搭建一个vue项目" class="headerlink" title="从零搭建一个vue项目"></a>从零搭建一个vue项目</h1><p>最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。</p>
-<p><code>由于是真的从零开始，所以长文预警！！！😂</code></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/09/webpack探索-从零搭建一个vue项目/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/09/webpack探索-从零搭建一个vue项目/" rel="next" title="webpack探索---从零搭建一个vue项目">
+                <i class="fa fa-chevron-left"></i> webpack探索---从零搭建一个vue项目
               </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2018/11/12/react-render-by-father/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OwnGhy">
-      <meta itemprop="description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sycamore">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/12/react-render-by-father/" class="post-title-link" itemprop="http://ownghy.github.io/index.html">React父组件render引起子组件render</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-12 14:14:21" itemprop="dateCreated datePublished" datetime="2018-11-12T14:14:21+08:00">2018-11-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 10:17:55" itemprop="dateModified" datetime="2019-07-11T10:17:55+08:00">2019-07-11</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/React/" itemprop="url" rel="index"><span itemprop="name">React</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h3 id="父组件render引起子组件render"><a href="#父组件render引起子组件render" class="headerlink" title="父组件render引起子组件render"></a>父组件render引起子组件render</h3><p>由于<code>redux</code>与<code>dva</code>的出现，在React开发时使用<code>dva</code>进行开发而忽略了原生的一些概念。比如：父组件render必然会引起子组件的render。</p>
-<p>父组件的render默认情况下就会触发子组件的render过程，子组件的render过程又会触发它的子组件的render过程，一直到React元素（即<code>jsx</code>中的<code>&lt;div&gt;</code>这样的元素）。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/12/react-render-by-father/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -953,192 +631,22 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ownghy.github.io/2018/09/19/nodejs-fs-async/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="OwnGhy">
-      <meta itemprop="description" content="吾乃生于乱世之中，自当斩破尘埃。---索隆">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/17840246?s=460&v=4">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sycamore">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/09/19/nodejs-fs-async/" class="post-title-link" itemprop="http://ownghy.github.io/index.html">对fs异步读取文件的理解</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-09-19 16:38:07" itemprop="dateCreated datePublished" datetime="2018-09-19T16:38:07+08:00">2018-09-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-11 10:17:55" itemprop="dateModified" datetime="2019-07-11T10:17:55+08:00">2019-07-11</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Nodejs/" itemprop="url" rel="index"><span itemprop="name">Nodejs</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在nodejs的API文档中可以看到大部分的文件或者文件夹的读取操作都有异步和同步两种操作。<br>有这样一个需求，读取某个文件夹下面的所有文件，因为有文件夹的嵌套，所以需要使用递归来实现这一功能。<br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/09/19/nodejs-fs-async/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1159,8 +667,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1261,6 +778,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建项目-amp-基本的打包配置"><span class="nav-number">1.</span> <span class="nav-text">创建项目&amp;基本的打包配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置webpack-bundle-analyzer"><span class="nav-number">2.</span> <span class="nav-text">配置webpack-bundle-analyzer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码分离-Code-Splitting"><span class="nav-number">3.</span> <span class="nav-text">代码分离 Code Splitting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#动态导入：-webpack-针对动态导入的默认代码分离打包规则"><span class="nav-number">3.1.</span> <span class="nav-text">动态导入： webpack 针对动态导入的默认代码分离打包规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#防止重复"><span class="nav-number">3.2.</span> <span class="nav-text">防止重复</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分离-vendor"><span class="nav-number">3.2.1.</span> <span class="nav-text">分离 vendor</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置optimization-splitChunks"><span class="nav-number">3.2.2.</span> <span class="nav-text">配置optimization.splitChunks</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动分离vendor"><span class="nav-number">3.2.3.</span> <span class="nav-text">自动分离vendor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DLL"><span class="nav-number">4.</span> <span class="nav-text">DLL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DLL-基本配置"><span class="nav-number">4.1.</span> <span class="nav-text">DLL 基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DLL-如何自动化？"><span class="nav-number">4.2.</span> <span class="nav-text">DLL 如何自动化？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">5.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1396,6 +929,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
@@ -1425,6 +962,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'OwnGhy',
+            repo: 'OwnGhy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
+            
+                client_id: '9df6ba9180805813015e'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 

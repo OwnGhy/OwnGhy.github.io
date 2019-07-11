@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://ownghy.github.io/2019/07/11/webpack-enhance/</loc>
+        <lastmod>2019-07-11T02:19:37.602Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://ownghy.github.io/2019/07/09/webpack%E6%8E%A2%E7%B4%A2-%E4%BB%8E%E9%9B%B6%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAvue%E9%A1%B9%E7%9B%AE/</loc>
-        <lastmod>2019-07-09T10:18:27.640Z</lastmod>
+        <lastmod>2019-07-11T02:17:55.028Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +24,7 @@
 
     <url>
         <loc>http://ownghy.github.io/2018/11/12/react-render-by-father/</loc>
-        <lastmod>2018-11-12T12:58:59.491Z</lastmod>
+        <lastmod>2019-07-11T02:17:55.027Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +32,7 @@
 
     <url>
         <loc>http://ownghy.github.io/2018/09/19/nodejs-fs-async/</loc>
-        <lastmod>2018-11-12T12:58:59.490Z</lastmod>
+        <lastmod>2019-07-11T02:17:55.026Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
