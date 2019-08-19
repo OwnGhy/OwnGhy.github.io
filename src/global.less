@@ -1,0 +1,67 @@
+@import "./variables.less";
+@import "~highlight.js/styles/github.css";
+
+// 字体
+@font-face {
+  font-family: 'MarkerScratch-Regular';
+  src: url('assets/fonts/MarkerScratch-Regular-2.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Pudding';
+  src: url('assets/fonts/Pudding.ttf') format('truetype');
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+// reset
+html, body {
+  padding: 0 0 40px;
+  margin: 0;
+  background: #efefef;
+}
+
+a {
+  color: @colorPrimary;
+  //text-decoration: none;
+}
+
+.card {
+  padding: 16px;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-radius: @borderRadius;
+}
+
+.markdown-container {
+  pre {
+    overflow: auto;
+    padding: 16px;
+    background: #f7f7f7;
+  }
+
+  code {
+    background: #f7f7f7;
+  }
+
+  blockquote {
+    margin: 16px 0;
+    padding: 12px;
+    background: #f7f7f7;
+  }
+
+  p, li{
+    color: #555;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.tag {
+  color: #ffa323;
+  margin-left: 12px;
+  padding: 0 3px;
+  background: #f8f8f8;
+}
