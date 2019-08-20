@@ -82,7 +82,8 @@ export const formatByMarked = (mdStr) => {
 };
 
 export const getMonthDate = (date) => {
-    let tempDate = new Date(date);
+    let tempDate = new Date(date.replace(/\./g, '-'));
+    debugger
     let month = tempDate.getMonth() + 1;
     let day = tempDate.getDate();
 

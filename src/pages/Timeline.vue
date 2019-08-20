@@ -44,7 +44,7 @@
                 };
 
                 for (let i = 0; i < count; i++) {
-                    let year = new Date(originBlog[i].date).getFullYear();
+                    let year = new Date(originBlog[i].date.replace(/\./g, '-')).getFullYear();
 
                     if (yearBlog.year === year) {
                         yearBlog.blog.push(originBlog[i]);
@@ -63,6 +63,8 @@
                 }
 
                 timelineBlog.push(yearBlog);
+
+                console.log(timelineBlog);
 
                 return timelineBlog;
             }
