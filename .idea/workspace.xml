@@ -2,95 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0c79878c-7979-44d4-b9b7-5ab5235f34b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/2.eb1ed1064618ff63320d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/09/19/nodejs-fs-async/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018/11/12/react-render-by-father/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/07/09/webpack探索-从零搭建一个vue项目/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2019/07/11/webpack-enhance/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/3.eb1ed1064618ff63320d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4.eb1ed1064618ff63320d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/5.eb1ed1064618ff63320d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.eb1ed1064618ff63320d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/09/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/11/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2018/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/07/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/2019/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/archives/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/Nodejs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/React/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/categories/webpack/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/category-sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/algolia_logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/apple-touch-icon-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/avatar.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc-nd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc-sa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-nd.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by-sa.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-by.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cc-zero.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon-16x16-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/favicon-32x32-next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/placeholder.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quote-l.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quote-r.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/searchicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer1.1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer1.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer1.3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer6.1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webpack/analyzer6.2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/affix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/algolia-search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/exturl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/js.cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/motion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/post-details.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/schemes/pisces.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/scroll-cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/scrollspy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/src/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/HELP-US-OUT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/bower.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jquery/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ua-parser-js/dist/ua-parser.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ua-parser-js/dist/ua-parser.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/velocity/velocity.ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sitemap.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.eb1ed1064618ff63320d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tag-sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/Nodejs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/React/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/async-await/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/vue/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tags/webpack/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor.eb1ed1064618ff63320d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor.eb1ed1064618ff63320d.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/style.c809746c4830381f99cd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/2.c809746c4830381f99cd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/3.c809746c4830381f99cd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/4.c809746c4830381f99cd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/5.c809746c4830381f99cd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.c809746c4830381f99cd.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.7f976d9bdfcae5323320.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.7f976d9bdfcae5323320.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.7f976d9bdfcae5323320.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor.c809746c4830381f99cd.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.7f976d9bdfcae5323320.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor.7f976d9bdfcae5323320.js" beforeDir="false" afterPath="$PROJECT_DIR$/vendor.c809746c4830381f99cd.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -103,21 +31,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="2.c809746c4830381f99cd.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2.c809746c4830381f99cd.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="180">
+              <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -152,7 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +91,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,34 +130,34 @@
       <option name="presentableId" value="Default" />
       <updated>1566226955591</updated>
       <workItem from="1566226956794" duration="674000" />
+      <workItem from="1566316651717" duration="261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="831000" />
+    <option name="totallyTimeSpent" value="1092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32969698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32969698" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947146" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,40 +167,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.pro.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/2018/2.eb1ed1064618ff63320d.js" />
-    <entry file="file://$PROJECT_DIR$/2.eb1ed1064618ff63320d.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.7f976d9bdfcae5323320.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -284,6 +178,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html" />
+    <entry file="file://$PROJECT_DIR$/webpack.pro.config.js" />
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/2018/2.eb1ed1064618ff63320d.js" />
+    <entry file="file://$PROJECT_DIR$/2.eb1ed1064618ff63320d.js" />
+    <entry file="file://$PROJECT_DIR$/2.7f976d9bdfcae5323320.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.c809746c4830381f99cd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
