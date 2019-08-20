@@ -72,6 +72,7 @@
                 background-size: 100%;
                 width: 100%;
                 height: 148px;
+                margin-bottom: 6px;
             }
             .catch-label {
                 color: #555;
