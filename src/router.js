@@ -1,6 +1,6 @@
 import Home from './pages/Home.vue';
 import Timeline from './pages/Timeline.vue';
-import Hobby from './pages/Hobby.vue';
+// import Hobby from './pages/Hobby.vue';
 import YeahMe from './pages/YeahMe.vue';
 import Detail from './pages/Detail.vue';
 
@@ -23,12 +23,12 @@ export default {
             name: 'timeline',
             component: Timeline
         },
-        {
-            path: '/hobby',
-            key: 'hobby',
-            name: 'hobby',
-            component: Hobby
-        },
+        // {
+        //     path: '/hobby',
+        //     key: 'hobby',
+        //     name: 'hobby',
+        //     component: Hobby
+        // },
         {
             path: '/yeah-me',
             key: 'yeah-me',
