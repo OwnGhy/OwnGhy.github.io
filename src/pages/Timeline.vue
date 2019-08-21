@@ -16,9 +16,10 @@
     </left-right-layout>
 </template>
 <script>
-    import LeftRightLayout from './../layouts/LeftRightLayout.vue';
-    import Overview from './../components/Overview.vue';
     import { getMonthDate } from "../utils/tools";
+
+    const Overview = () => import(/* webpackChunkName: "overview" */'./../components/Overview.vue');
+    const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
     export default {
         name: 'home',

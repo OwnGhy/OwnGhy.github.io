@@ -1,8 +1,8 @@
 const Home = () => import(/* webpackChunkName: "home" */'./pages/Home.vue');
-const Timeline = () => import(/* webpackChunkName: "Timeline" */'./pages/Timeline.vue');
-// const Hobby = () => import(/* webpackChunkName: "Hobby" */'./pages/Hobby.vue');
-const YeahMe = () => import(/* webpackChunkName: "YeahMe" */'./pages/YeahMe.vue');
-const Detail = () => import(/* webpackChunkName: "Detail" */'./pages/Detail.vue');
+const Timeline = () => import(/* webpackChunkName: "timeline" */'./pages/Timeline.vue');
+// const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const YeahMe = () => import(/* webpackChunkName: "yeahMe" */'./pages/YeahMe.vue');
+const Detail = () => import(/* webpackChunkName: "detail" */'./pages/Detail.vue');
 
 export default {
     mode: 'hash',

@@ -5,8 +5,9 @@
 </template>
 <script>
     import marked from 'marked';
-    import HomeLayout from './../layouts/HomeLayout.vue';
     import yeahme from '@assets/yeahme.md';
+
+    const HomeLayout = () => import(/* webpackChunkName: "home-layout" */'./../layouts/HomeLayout.vue');
 
     marked.setOptions({
         gfm: true,

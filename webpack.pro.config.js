@@ -8,8 +8,8 @@ const common = require('./webpack.common.js');
 module.exports = merge(common, {
     mode: 'production',
     output: {
-        chunkFilename: '[name].js',
-        filename: '[name].js',
+        chunkFilename: 'js/[name].js',
+        filename: 'js/[name].js',
         path: path.resolve(__dirname, './dist/')
     },
     resolve: {
