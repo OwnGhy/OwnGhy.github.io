@@ -56,8 +56,8 @@ const config = {
         htmlPlugin,
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: "style.[hash].css",
-            chunkFilename: "[name].[hash].css"
+            filename: "style.css",
+            chunkFilename: "[name].css"
         })
     ],
     resolve: {
