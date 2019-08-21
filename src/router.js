@@ -1,8 +1,8 @@
-import Home from './pages/Home.vue';
-import Timeline from './pages/Timeline.vue';
-import Hobby from './pages/Hobby.vue';
-import YeahMe from './pages/YeahMe.vue';
-import Detail from './pages/Detail.vue';
+const Home = () => import(/* webpackChunkName: "home" */'./pages/Home.vue');
+const Timeline = () => import(/* webpackChunkName: "Timeline" */'./pages/Timeline.vue');
+// const Hobby = () => import(/* webpackChunkName: "Hobby" */'./pages/Hobby.vue');
+const YeahMe = () => import(/* webpackChunkName: "YeahMe" */'./pages/YeahMe.vue');
+const Detail = () => import(/* webpackChunkName: "Detail" */'./pages/Detail.vue');
 
 export default {
     mode: 'hash',
@@ -23,12 +23,12 @@ export default {
             name: 'timeline',
             component: Timeline
         },
-        {
-            path: '/hobby',
-            key: 'hobby',
-            name: 'hobby',
-            component: Hobby
-        },
+        // {
+        //     path: '/hobby',
+        //     key: 'hobby',
+        //     name: 'hobby',
+        //     component: Hobby
+        // },
         {
             path: '/yeah-me',
             key: 'yeah-me',

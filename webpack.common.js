@@ -10,7 +10,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
     // 生成的html的文件名
     filename: 'index.html',
     // 注入bundle到body中
-    inject: 'body'
+    inject: 'body',
+    favicon: './src/assets/favicon.ico'
 });
 
 const config = {
@@ -55,8 +56,8 @@ const config = {
         htmlPlugin,
         new VueLoaderPlugin(),
         new MiniCssExtractPlugin({
-            filename: "style.[hash].css",
-            chunkFilename: "[name].[hash].css"
+            filename: "style.css",
+            chunkFilename: "[name].css"
         })
     ],
     resolve: {
