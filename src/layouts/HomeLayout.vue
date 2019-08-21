@@ -22,8 +22,9 @@
     </div>
 </template>
 <script>
-    import LeftRightLayout from './LeftRightLayout.vue';
-    import Overview from './../components/Overview.vue';
+    const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./LeftRightLayout.vue');
+    const Overview = () => import(/* webpackChunkName: "overview" */'./../components/Overview.vue');
+
     export default {
         name: 'home-layout',
         components: {

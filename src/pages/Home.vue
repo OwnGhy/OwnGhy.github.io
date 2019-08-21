@@ -20,7 +20,7 @@
     </home-layout>
 </template>
 <script>
-    import HomeLayout from './../layouts/HomeLayout.vue';
+    const HomeLayout = () => import(/* webpackChunkName: "home-layout" */'./../layouts/HomeLayout.vue');
 
     export default {
         name: 'home',

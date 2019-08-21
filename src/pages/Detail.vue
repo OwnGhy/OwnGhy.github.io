@@ -10,7 +10,7 @@
 
 </template>
 <script>
-    import LeftRightLayout from './../layouts/LeftRightLayout.vue';
+    const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
     export default {
         name: 'detail',
