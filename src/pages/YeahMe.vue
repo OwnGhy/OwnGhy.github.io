@@ -31,8 +31,3 @@
         }
     }
 </script>
-<style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
-
-</style>

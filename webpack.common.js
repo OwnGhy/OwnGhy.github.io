@@ -39,7 +39,15 @@ const config = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                     },
-                    'css-loader', 'less-loader'
+                    'css-loader', 'less-loader',
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [
+                                path.resolve(__dirname, './src/variables.less')
+                            ]
+                        }
+                    }
                 ]
             },
             {

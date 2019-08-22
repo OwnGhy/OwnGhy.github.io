@@ -73,8 +73,6 @@
     }
 </script>
 <style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
     .timeline-container {
         margin-top: 45px;
 

@@ -34,9 +34,6 @@
     }
 </script>
 <style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
-
     .container {
         .brand-wrapper {
             height: 580px;

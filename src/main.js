@@ -5,6 +5,8 @@ import App from './App.vue';
 import routerConfig from './router';
 import store from './store';
 import '@assets/iconfont/iconfont.js';
+import "./variables.less";
+import "./global.less";
 
 Vue.use(VueRouter);
 
