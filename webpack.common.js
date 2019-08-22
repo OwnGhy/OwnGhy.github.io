@@ -21,6 +21,10 @@ const config = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                loader: 'babel-loader',
+            },
+            {
                 test: /\.vue$/,
                 loader:'vue-loader'
             },

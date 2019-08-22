@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import blogs from './../../blog.json';
 import {formatByMarked} from "../utils/tools";
+import path from 'path';
 
 Vue.use(Vuex);
 
@@ -20,7 +21,10 @@ const state = {
 const actions = {
     getAllBlogContent({ commit }) {
         const blogPromise = blog.map(b => {
-            return import(`./../../src/publishers/${b.path.split('/src/publishers/')[1]}`);
+            // import(b.path)不行，是因为webpack的import()不能完全实现动态导入，不能传入变量，必须是字符串
+            // import(`./../../${b.path}`)不行，虽然是字符串了，但是没有标明一个统一的目录
+            // webpack会根据标明的目录统一将该目录下的文件进行单独打包，以实现动态导入
+            return import(`./../../publishers/${b.path.split('/publishers/')[1]}`);
         });
 
         Promise.all(blogPromise).then(res => {
