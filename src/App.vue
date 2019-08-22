@@ -122,9 +122,6 @@
     }
 </script>
 <style lang="less">
-    @import "./variables.less";
-    @import "./global.less";
-
     .search-icon {
         width: 20px;
         height: 20px;

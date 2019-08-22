@@ -62,9 +62,6 @@
 </script>
 
 <style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
-
     .overview {
         .catch-me {
             .catch-pic {

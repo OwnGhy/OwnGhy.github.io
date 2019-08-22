@@ -35,8 +35,6 @@
     }
 </script>
 <style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
     .blog-item {
         margin-bottom: 20px;
         .title {

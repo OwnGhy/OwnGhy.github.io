@@ -9,9 +9,6 @@
 
 </script>
 <style lang="less">
-    @import "./../variables.less";
-    @import "./../global.less";
-
     .hobby-container {
         margin-top: 65px;
         padding: 0 12px 20px;

@@ -17,10 +17,6 @@
     }
 </script>
 <style lang="less">
-
-    @import "./../variables.less";
-    @import "./../global.less";
-
     .main {
         position: relative;
         width: 1110px;
