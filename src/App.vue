@@ -92,9 +92,9 @@
         methods: {
             autoHideHeader() {
                 const header = document.getElementById('header-auto-up-down');
+                // scrolltop = (((t = document.documentElement) || (t = document.body.parentNode)) &&  typeof t.scrollTop == 'number' ? t : document.body).scrollTop;
 
-
-                this.currentTop = document.documentElement.scrollTop;
+                this.currentTop = document.documentElement.scrollTop || document.body.scrollTop;
 
                 if (this.previousTop >= this.currentTop) {
                     if (this.previousTop - this.currentTop >= this.scrollDelta) {
@@ -112,7 +112,9 @@
             autoFixSidebar(e) {
                 const sidebar = document.querySelector('.sidebar-inner');
 
-                if (document.documentElement.scrollTop > sidebar.dataset.affix) {
+                const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+                if (scrollTop > sidebar.dataset.affix) {
                     sidebar.setAttribute('class', 'sidebar-inner card affix');
                 } else {
                     sidebar.setAttribute('class', 'sidebar-inner card');
