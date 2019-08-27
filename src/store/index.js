@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import blogs from './../../blog.json';
-import {formatByMarked} from "../utils/tools";
+import {formatByMarked} from "@utils/tools";
 
 Vue.use(Vuex);
 
@@ -17,20 +17,21 @@ const state = {
     countCategory: category.length
 };
 
+function escape2Html(str) {
+    let arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"', '#x60': '`'};
+    return str.replace(/&(lt|gt|nbsp|amp|quot|#x60);/ig,function(all,t){
+        return arrEntities[t];
+    });
+}
+
 const actions = {
     getAllBlogContent({ commit }) {
-        const blogPromise = blog.map(b => {
-            return import(`./../../src/publishers/${b.path.split('/src/publishers/')[1]}`);
-        });
+        const blogWithContent = blog.map((b) => ({
+            ...b,
+            ...formatByMarked(escape2Html(b.outline))
+        }));
 
-        Promise.all(blogPromise).then(res => {
-            const blogWithContent = blog.map((b, index) => ({
-                ...b,
-                ...formatByMarked(res[index].default)
-            }));
-
-            commit('SET_ALL', blogWithContent);
-        });
+        commit('SET_ALL', blogWithContent);
     }
 };
 

@@ -9,6 +9,8 @@
 ## 初始化项目
 首先☝️，在命令行中创建文件夹并进入，使用npm命令初始化项目：
 
+<!-- more -->
+
 ```bash
 mkdir vue-starter && cd vue-starter
 npm init

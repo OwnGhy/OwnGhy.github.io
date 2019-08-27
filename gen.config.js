@@ -1,4 +1,4 @@
 module.exports = {
-    mdPath: '/src/publishers',
+    mdPath: '/publishers',
     filename: 'blog.json'
 };

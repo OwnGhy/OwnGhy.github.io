@@ -9,7 +9,7 @@
 mkdir dva-typescript && cd dva-typescript
 npm init
 ```
-
+<!-- more -->
 安装typescript:
 
 ```bash
