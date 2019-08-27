@@ -10,6 +10,7 @@
 
 </template>
 <script>
+    import { formatByMarked } from '@utils/tools';
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
     export default {
@@ -17,9 +18,16 @@
         components: {
             LeftRightLayout
         },
-        computed: {
-            detail() {
-                return this.$store.state.blogWithContent.find(b => b.id === this.$route.params.id)
+        data() {
+            return {
+                detail: {}
+            }
+        },
+        methods: {
+            async getDetail(path) {
+                let md = await import(/* webpackChunkName: "publisher-[request]" */`./../../publishers/${path.split('/publishers/')[1]}`);
+
+                return formatByMarked(md.default);
             }
         },
         mounted() {
@@ -30,6 +38,15 @@
             });
 
             document.documentElement.scrollTop = 0;
+
+            let detail = this.$store.state.blogWithContent.find(b => b.id === this.$route.params.id);
+
+            this.getDetail(detail.path).then((res) => {
+                this.detail = {
+                    ...detail,
+                    ...res
+                };
+            });
         }
     }
 </script>

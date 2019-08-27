@@ -7,6 +7,7 @@
 
 ### 初始化项目
 创建文件夹并初始化：
+<!-- more -->
 
 ```
 mkdir vue-fun-loading && cd vue-fun-loading

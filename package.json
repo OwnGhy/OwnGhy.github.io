@@ -25,6 +25,7 @@
     "webpack-cli": "^3.3.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -34,7 +35,7 @@
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
-    "md-info-generator": "^1.0.3",
+    "md-info-generator": "^1.0.5",
     "mini-css-extract-plugin": "^0.7.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "raw-loader": "^3.0.0",
