@@ -1,6 +1,6 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[14],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
 
-/***/ 49:
+/***/ 42:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +28,7 @@ var marked_default = /*#__PURE__*/__webpack_require__.n(marked);
 
 
 
-const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 4).then(__webpack_require__.bind(null, 54));
+const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 3).then(__webpack_require__.bind(null, 47));
 
 marked_default.a.setOptions({
   gfm: true,

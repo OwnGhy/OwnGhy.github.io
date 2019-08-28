@@ -55,21 +55,21 @@
 /******/
 /******/ 	// object to store loaded CSS chunks
 /******/ 	var installedCssChunks = {
-/******/ 		1: 0
+/******/ 		0: 0
 /******/ 	}
 /******/
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		1: 0
+/******/ 		0: 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({"2":"detail","3":"home","4":"home-layout","5":"left-right-layout","6":"overview","7":"publisher-JS-md","8":"publisher-React-TS_DVA_Build-md","9":"publisher-Vue-Build_A_Vue_Project-md","10":"publisher-Vue-VUE-npm-md","11":"timeline","13":"vendors~detail","14":"yeahMe"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "js/" + ({"1":"detail","2":"home","3":"home-layout","4":"left-right-layout","5":"overview","6":"publisher-JS-md","7":"publisher-React-TS_DVA_Build-md","8":"publisher-Vue-Build_A_Vue_Project-md","9":"publisher-Vue-VUE-npm-md","10":"timeline","12":"yeahMe"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -103,11 +103,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"2":1,"3":1,"4":1,"5":1,"6":1,"11":1};
+/******/ 		var cssChunks = {"1":1,"2":1,"3":1,"4":1,"5":1,"10":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({"2":"detail","3":"home","4":"home-layout","5":"left-right-layout","6":"overview","7":"publisher-JS-md","8":"publisher-React-TS_DVA_Build-md","9":"publisher-Vue-Build_A_Vue_Project-md","10":"publisher-Vue-VUE-npm-md","11":"timeline","13":"vendors~detail","14":"yeahMe"}[chunkId]||chunkId) + ".css";
+/******/ 				var href = "css/" + ({"1":"detail","2":"home","3":"home-layout","4":"left-right-layout","5":"overview","6":"publisher-JS-md","7":"publisher-React-TS_DVA_Build-md","8":"publisher-Vue-Build_A_Vue_Project-md","9":"publisher-Vue-VUE-npm-md","10":"timeline","12":"yeahMe"}[chunkId]||chunkId) + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -263,7 +263,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([24,0,12]);
+/******/ 	deferredModules.push([24,11]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -802,14 +802,14 @@ var App_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/router.js
-const Home = () => __webpack_require__.e(/* import() | home */ 3).then(__webpack_require__.bind(null, 50));
+const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 43));
 
-const Timeline = () => __webpack_require__.e(/* import() | timeline */ 11).then(__webpack_require__.bind(null, 52)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 45)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 
 
-const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 14).then(__webpack_require__.bind(null, 49));
+const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 42));
 
-const Detail = () => Promise.all(/* import() | detail */[__webpack_require__.e(0), __webpack_require__.e(13), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, 51));
+const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 44));
 
 /* harmony default export */ var router = ({
   mode: 'hash',
