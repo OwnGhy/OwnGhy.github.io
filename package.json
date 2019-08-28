@@ -16,11 +16,12 @@
   "author": "OwnGhy <919986426@qq.com>",
   "license": "ISC",
   "dependencies": {
+    "gitment": "0.0.3",
     "highlight.js": "^9.15.8",
     "marked": "^0.6.2",
     "vue": "^2.6.10",
-    "vuex": "^3.1.1",
     "vue-router": "^3.0.6",
+    "vuex": "^3.1.1",
     "webpack": "^4.34.0",
     "webpack-cli": "^3.3.4"
   },

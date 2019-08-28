@@ -1,8 +1,11 @@
 <template>
     <div class="detail-container">
         <left-right-layout affix="">
-            <div slot="left" class="card">
-                <div v-if="detail" class="markdown-container" v-html="detail.content"></div>
+            <div slot="left">
+                <div class="card">
+                    <div v-if="detail" class="markdown-container" v-html="detail.content"></div>
+                </div>
+                <div id="comment-wrap"></div>
             </div>
             <div class="toc" slot="right" v-if="detail" v-html="detail.tocHtml"></div>
         </left-right-layout>
@@ -10,6 +13,8 @@
 
 </template>
 <script>
+    import 'gitment/style/default.css';
+    import Gitment from 'gitment';
     import { formatByMarked } from '@utils/tools';
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
@@ -46,6 +51,21 @@
                     ...detail,
                     ...res
                 };
+
+                console.log(this.detail);
+
+                // 初始化gitment
+                const gitment = new Gitment({
+                    id: this.detail.id,
+                    owner: 'OwnGhy',
+                    repo: 'OwnGhy.github.io',
+                    oauth: {
+                        client_id: '9df6ba9180805813015e',
+                        client_secret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
+                    }
+                });
+
+                gitment.render('comment-wrap')
             });
         }
     }
