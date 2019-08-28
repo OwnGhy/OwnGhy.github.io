@@ -52,8 +52,6 @@
                     ...res
                 };
 
-                console.log(this.detail);
-
                 // 初始化gitment
                 const gitment = new Gitment({
                     id: this.detail.id,
