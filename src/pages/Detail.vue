@@ -13,9 +13,8 @@
 
 </template>
 <script>
-    import 'gitment/style/default.css';
-    import Gitment from 'gitment';
     import { formatByMarked } from '@utils/tools';
+
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
     export default {
@@ -52,18 +51,18 @@
                     ...res
                 };
 
-                // 初始化gitment
-                const gitment = new Gitment({
-                    id: this.detail.id,
-                    owner: 'OwnGhy',
+                // 初始化 gitalk
+                const gitalk = new Gitalk({
+                    clientID: '9df6ba9180805813015e',
+                    clientSecret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
                     repo: 'OwnGhy.github.io',
-                    oauth: {
-                        client_id: '9df6ba9180805813015e',
-                        client_secret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
-                    }
+                    owner: 'OwnGhy',
+                    admin: ['OwnGhy'],
+                    id: this.detail.id,
+                    distractionFreeMode: false  // Facebook-like distraction free mode
                 });
 
-                gitment.render('comment-wrap')
+                gitalk.render('comment-wrap');
             });
         }
     }

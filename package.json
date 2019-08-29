@@ -16,7 +16,6 @@
   "author": "OwnGhy <919986426@qq.com>",
   "license": "ISC",
   "dependencies": {
-    "gitment": "0.0.3",
     "highlight.js": "^9.15.8",
     "marked": "^0.6.2",
     "vue": "^2.6.10",
