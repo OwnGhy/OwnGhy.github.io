@@ -11,7 +11,8 @@ const htmlPlugin = new HtmlWebpackPlugin({
     filename: 'index.html',
     // 注入bundle到body中
     inject: 'body',
-    favicon: './favicon.ico'
+    favicon: './favicon.ico',
+    template: './src/index.html'
 });
 
 const config = {

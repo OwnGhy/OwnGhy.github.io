@@ -1,8 +1,11 @@
 <template>
     <div class="detail-container">
         <left-right-layout affix="">
-            <div slot="left" class="card">
-                <div v-if="detail" class="markdown-container" v-html="detail.content"></div>
+            <div slot="left">
+                <div class="card">
+                    <div v-if="detail" class="markdown-container" v-html="detail.content"></div>
+                </div>
+                <div id="comment-wrap"></div>
             </div>
             <div class="toc" slot="right" v-if="detail" v-html="detail.tocHtml"></div>
         </left-right-layout>
@@ -11,6 +14,7 @@
 </template>
 <script>
     import { formatByMarked } from '@utils/tools';
+
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./../layouts/LeftRightLayout.vue');
 
     export default {
@@ -46,6 +50,19 @@
                     ...detail,
                     ...res
                 };
+
+                // 初始化 gitalk
+                const gitalk = new Gitalk({
+                    clientID: '9df6ba9180805813015e',
+                    clientSecret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
+                    repo: 'OwnGhy.github.io',
+                    owner: 'OwnGhy',
+                    admin: ['OwnGhy'],
+                    id: this.detail.id,
+                    distractionFreeMode: false  // Facebook-like distraction free mode
+                });
+
+                gitalk.render('comment-wrap');
             });
         }
     }
