@@ -67,12 +67,12 @@ module.exports = webpackAsyncContext;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=d76dda4c&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=c0756a5c&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"detail-container"},[_c('left-right-layout',{attrs:{"affix":""}},[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('div',{staticClass:"card"},[(_vm.detail)?_c('div',{staticClass:"markdown-container",domProps:{"innerHTML":_vm._s(_vm.detail.content)}}):_vm._e()]),_vm._v(" "),_c('div',{attrs:{"id":"comment-wrap"}})]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"toc",attrs:{"slot":"right"},domProps:{"innerHTML":_vm._s(_vm.detail.tocHtml)},slot:"right"}):_vm._e()])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=d76dda4c&
+// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=c0756a5c&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
 var tools = __webpack_require__(10);
