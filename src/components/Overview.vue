@@ -1,7 +1,7 @@
 <template>
     <div class="overview">
         <div class="catch-me">
-            <div class="catch-pic" />
+            <img id="catch-pic" />
             <p class="catch-label">Can you catch me?</p>
             <div class="catch-wrap">
                 <a target="_blank" class="catch-item" v-for="c in this.catch" :key="c.icon" :data-tip="c.tip" :href="c.url">
@@ -64,9 +64,8 @@
 <style lang="less">
     .overview {
         .catch-me {
-            .catch-pic {
-                background: url("./../assets/pages/catch.png");
-                background-size: 100%;
+            #catch-pic {
+                background: @colorPrimary;
                 width: 100%;
                 height: 148px;
                 margin-bottom: 6px;
