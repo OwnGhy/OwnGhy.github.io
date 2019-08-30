@@ -802,14 +802,14 @@ var App_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/router.js
-const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 43));
+const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 46));
 
-const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 45)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 48)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 
 
-const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 42));
+const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 45));
 
-const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 44));
+const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 47));
 
 /* harmony default export */ var router = ({
   mode: 'hash',

@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 45:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -54,9 +54,9 @@ var tools = __webpack_require__(10);
 //
 
 
-const Overview = () => __webpack_require__.e(/* import() | overview */ 5).then(__webpack_require__.bind(null, 46));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 5).then(__webpack_require__.bind(null, 49));
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 4).then(__webpack_require__.bind(null, 48));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 4).then(__webpack_require__.bind(null, 51));
 
 /* harmony default export */ var Timelinevue_type_script_lang_js_ = ({
   name: 'home',

@@ -12,19 +12,19 @@
 
 var map = {
 	"./JS/正则实用技巧记录.md": [
-		38,
+		41,
 		6
 	],
 	"./React/TS_DVA_Build.md": [
-		39,
+		42,
 		7
 	],
 	"./Vue/Build_A_Vue_Project.md": [
-		40,
+		43,
 		8
 	],
 	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
-		41,
+		44,
 		9
 	]
 };
@@ -61,7 +61,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 44:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -94,7 +94,7 @@ var tools = __webpack_require__(10);
 //
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 4).then(__webpack_require__.bind(null, 48));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 4).then(__webpack_require__.bind(null, 51));
 
 /* harmony default export */ var Detailvue_type_script_lang_js_ = ({
   name: 'detail',
