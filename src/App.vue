@@ -130,6 +130,7 @@
                 this.filter = e.target.value;
             },
             search() {
+                this.$router.push('/home');
                 this.$store.dispatch('getBlogContent', this.filter);
             }
         }
