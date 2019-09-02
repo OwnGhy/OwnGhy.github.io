@@ -132,6 +132,7 @@
             search() {
                 this.$router.push('/home');
                 this.$store.dispatch('getBlogContent', this.filter);
+                document.getElementById('main').scrollIntoView();
             }
         }
     }
