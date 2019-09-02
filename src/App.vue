@@ -2,9 +2,14 @@
     <div id="app">
         <header-auto-up-down>
             <navigation :navs="navs">
-                <!--<svg class="icon search-icon" aria-hidden="true">-->
-                    <!--<use xlink:href="#icon-search"></use>-->
-                <!--</svg>-->
+                <div class="search-wrap">
+                    <input @keyup.enter="search" @input="filterChange" class="search-input" />
+                    <span @click="search">
+                        <svg class="icon search-icon" aria-hidden="true">
+                        <use xlink:href="#icon-search"></use>
+                    </svg>
+                    </span>
+                </div>
             </navigation>
         </header-auto-up-down>
         <router-view></router-view>
@@ -21,6 +26,7 @@
         },
         data() {
             return {
+                filter: '',
                 navs: [
                     {
                         title: '首页',
@@ -77,7 +83,7 @@
             }
         },
         mounted() {
-            this.$store.dispatch('getAllBlogContent');
+            this.$store.dispatch('getBlogContent');
 
             window.addEventListener('scroll', (e) => {
                 if (!this.isScroll) {
@@ -119,15 +125,33 @@
                 } else {
                     sidebar.setAttribute('class', 'sidebar-inner card');
                 }
+            },
+            filterChange(e) {
+                this.filter = e.target.value;
+            },
+            search() {
+                this.$store.dispatch('getBlogContent', this.filter);
             }
         }
     }
 </script>
 <style lang="less">
-    .search-icon {
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        fill: rgb(100, 237, 172);
+    .search-wrap {
+        height: 25px;
+        border-bottom: 1px solid #64edac;
+        margin-top: 10px;
+
+        .search-input {
+            background-color: rgba(0, 0, 0, 0);
+            border: unset;
+            outline: unset;
+            color: #fff;
+        }
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            fill: rgb(100, 237, 172);
+        }
     }
 </style>

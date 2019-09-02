@@ -25,8 +25,8 @@ function escape2Html(str) {
 }
 
 const actions = {
-    getAllBlogContent({ commit }) {
-        const blogWithContent = blog.map((b) => ({
+    getBlogContent({ commit }, search = '') {
+        const blogWithContent = (search ? blog.filter(i => i.title.includes(search) || i.tags.includes(search)) : blog).map((b) => ({
             ...b,
             ...formatByMarked(escape2Html(b.outline))
         }));

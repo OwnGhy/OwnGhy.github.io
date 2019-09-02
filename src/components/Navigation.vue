@@ -14,9 +14,9 @@
                     </ul>
                 </router-link>
             </li>
-            <span class="navigation-extra">
+            <div class="navigation-extra">
                 <slot></slot>
-            </span>
+            </div>
         </ul>
     </nav>
 </template>
@@ -108,7 +108,7 @@
             }
 
             .navigation-extra {
-                line-height: 45px;
+                height: 45px;
                 float: right;
             }
         }
