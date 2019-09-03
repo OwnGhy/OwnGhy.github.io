@@ -2,13 +2,13 @@
     <div class="container">
         <header>
             <div class="brand-wrapper">
-                <img id="brand-img" />
+                <img id="brand-img" :src="brandImg" />
                 <div class="brand">
                     <h1>Sycamore</h1>
                 </div>
             </div>
             <div class="author-wrapper">
-                <img id="avatar" />
+                <img id="avatar" :src="avatarImg" />
                 <p class="motto">比你瘦的人都在努力学习，你有什么理由不减肥？</p>
             </div>
         </header>
@@ -25,7 +25,6 @@
 <script>
     import brand from '@assets/swim.jpg';
     import avatar from '@assets/avatar.jpeg';
-    import catchme from '@assets/pages/catch.png';
 
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./LeftRightLayout.vue');
     const Overview = () => import(/* webpackChunkName: "overview" */'./../components/Overview.vue');
@@ -36,24 +35,15 @@
             LeftRightLayout,
             Overview
         },
+        data() {
+            return {
+                brandImg: '',
+                avatarImg: ''
+            };
+        },
         mounted() {
-            window.onload = () => {
-                const brandImg = document.getElementById('brand-img');
-                const avatarImg = document.getElementById('avatar');
-                const catchImg = document.getElementById('catch-pic');
-
-                if (brandImg) {
-                    brandImg.setAttribute('src', brand);
-                }
-
-                if (avatarImg) {
-                    avatarImg.setAttribute('src', avatar);
-                }
-
-                if (catchImg) {
-                    catchImg.setAttribute('src', catchme);
-                }
-            }
+            this.brandImg = brand;
+            this.avatarImg = avatar;
         }
     }
 </script>

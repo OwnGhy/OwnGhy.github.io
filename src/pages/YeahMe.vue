@@ -28,6 +28,11 @@
             yeahmeMd() {
                 return marked(yeahme);
             }
+        },
+        mounted() {
+            setTimeout(() => {
+                document.getElementById('main').scrollIntoView();
+            }, 300);
         }
     }
 </script>

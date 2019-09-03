@@ -10,11 +10,11 @@
 </script>
 <style lang="less">
     .header-auto-up-down {
+        z-index: 9;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 2;
 
         transition: transform .5s;
 

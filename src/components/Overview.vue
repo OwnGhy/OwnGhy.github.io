@@ -1,7 +1,7 @@
 <template>
     <div class="overview">
         <div class="catch-me">
-            <img id="catch-pic" />
+            <img id="catch-pic" :src="catchImg" />
             <p class="catch-label">Can you catch me?</p>
             <div class="catch-wrap">
                 <a target="_blank" class="catch-item" v-for="c in this.catch" :key="c.icon" :data-tip="c.tip" :href="c.url">
@@ -24,6 +24,8 @@
     </div>
 </template>
 <script>
+    import catchme from '@assets/pages/catch.png';
+
     export default {
         name: 'overview',
         computed: {
@@ -36,6 +38,7 @@
         },
         data() {
             return {
+                catchImg: '',
                 catch: [
                     {
                         name: 'Github',
@@ -57,6 +60,9 @@
                     }
                 ]
             }
+        },
+        mounted() {
+            this.catchImg = catchme;
         }
     }
 </script>

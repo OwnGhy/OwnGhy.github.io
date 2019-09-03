@@ -65,8 +65,6 @@
 
                 timelineBlog.push(yearBlog);
 
-                console.log(timelineBlog);
-
                 return timelineBlog;
             }
         }
