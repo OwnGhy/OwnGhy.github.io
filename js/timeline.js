@@ -24,12 +24,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Timeline.vue?vue&type=template&id=00774b24&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Timeline.vue?vue&type=template&id=3d621914&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('left-right-layout',{staticClass:"timeline-container",attrs:{"affix":"576"}},[_c('div',{staticClass:"timeline-content card",attrs:{"slot":"left"},slot:"left"},_vm._l((_vm.timelineBlog),function(i){return _c('div',{staticClass:"timeline-item"},[_c('p',{staticClass:"timeline-year"},[_vm._v(_vm._s(i.year))]),_vm._v(" "),_vm._l((i.blog),function(b){return _c('div',{staticClass:"timeline-blog-info"},[_c('span',{staticClass:"date"},[_vm._v(_vm._s(_vm.getMonthDate(b.date)))]),_vm._v(" "),_c('span',{staticClass:"title"},[_c('router-link',{attrs:{"to":("/blog/" + (b.id))}},[_vm._v(_vm._s(b.title))])],1),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v(_vm._s(b.tags))])])})],2)}),0),_vm._v(" "),_c('div',{attrs:{"slot":"right"},slot:"right"},[_c('overview')],1)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Timeline.vue?vue&type=template&id=00774b24&
+// CONCATENATED MODULE: ./src/pages/Timeline.vue?vue&type=template&id=3d621914&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
 var tools = __webpack_require__(10);
@@ -100,7 +100,6 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
       }
 
       timelineBlog.push(yearBlog);
-      console.log(timelineBlog);
       return timelineBlog;
     }
 
