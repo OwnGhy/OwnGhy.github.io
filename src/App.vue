@@ -57,6 +57,12 @@
                             }
                         ]
                     },
+                    {
+                        title: '留言板',
+                        key: 'message',
+                        icon: '#icon-message',
+                        to: '/message'
+                    },
                     // {
                     //     title: '生活小记',
                     //     key: 'hobby',
