@@ -1,7 +1,11 @@
 <template>
     <home-layout>
-        <div slot="content" class="card" id="comment-wrap">
-
+        <div slot="content">
+            <div class="card message-desc">
+                <p>有个同学说要来给我喊 666，所以加了个留言板，hhhhhh～😜</p>
+                <p>当然，希望大家一起来讨论或者是给我提意见才是正经的～</p>
+            </div>
+            <div class="card" id="comment-wrap"></div>
         </div>
     </home-layout>
 </template>
@@ -31,3 +35,18 @@
         }
     }
 </script>
+<style lang="less">
+    .message-desc {
+        margin-bottom: 20px;
+        color: #555;
+        font-size: 14px;
+        p {
+            margin-top: 0;
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+</style>
