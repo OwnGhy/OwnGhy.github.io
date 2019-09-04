@@ -536,12 +536,12 @@ var vue_runtime_min_default = /*#__PURE__*/__webpack_require__.n(vue_runtime_min
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 var vue_router_esm = __webpack_require__(9);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=3bcd1881&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=2c58f156&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('header-auto-up-down',[_c('navigation',{attrs:{"navs":_vm.navs}},[_c('div',{staticClass:"search-wrap"},[_c('input',{staticClass:"search-input",on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.search($event)},"input":_vm.filterChange}}),_vm._v(" "),_c('span',{on:{"click":_vm.search}},[_c('svg',{staticClass:"icon search-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-search"}})])])])])],1),_vm._v(" "),_c('router-view')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=3bcd1881&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=2c58f156&
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HeaderAutoUpDown.vue?vue&type=template&id=36eed0c5&
 var HeaderAutoUpDownvue_type_template_id_36eed0c5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header-auto-up-down",attrs:{"id":"header-auto-up-down"}},[_vm._t("default")],2)}
@@ -711,6 +711,11 @@ var Navigation_component = Object(componentNormalizer["a" /* default */])(
           key: 'md-info-generator',
           url: 'https://github.com/OwnGhy/md-info-generator'
         }]
+      }, {
+        title: '留言板',
+        key: 'message',
+        icon: '#icon-message',
+        to: '/message'
       }, // {
       //     title: '生活小记',
       //     key: 'hobby',
@@ -818,14 +823,16 @@ var App_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/router.js
-const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 46));
+const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 49));
 
-const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 48)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 50));
+
+const MessageBoard = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 51)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 
 
-const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 45));
+const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 47));
 
-const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 47));
+const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 48));
 
 /* harmony default export */ var router = ({
   mode: 'hash',
@@ -842,6 +849,11 @@ const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__web
     key: 'timeline',
     name: 'timeline',
     component: Timeline
+  }, {
+    path: '/message',
+    key: 'message',
+    name: 'message',
+    component: MessageBoard
   }, // {
   //     path: '/hobby',
   //     key: 'hobby',

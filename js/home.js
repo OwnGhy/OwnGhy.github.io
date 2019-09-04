@@ -7,7 +7,7 @@
 
 /***/ }),
 
-/***/ 31:
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 46:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -53,7 +53,7 @@ var staticRenderFns = []
 //
 //
 //
-const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 3).then(__webpack_require__.bind(null, 50));
+const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 3).then(__webpack_require__.bind(null, 53));
 
 /* harmony default export */ var Homevue_type_script_lang_js_ = ({
   name: 'home',
@@ -70,7 +70,7 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 3).t
 // CONCATENATED MODULE: ./src/pages/Home.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_Homevue_type_script_lang_js_ = (Homevue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./src/pages/Home.vue?vue&type=style&index=0&lang=less&
-var Homevue_type_style_index_0_lang_less_ = __webpack_require__(31);
+var Homevue_type_style_index_0_lang_less_ = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
