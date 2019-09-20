@@ -38,12 +38,12 @@ module.exports = "data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBk
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/layouts/HomeLayout.vue?vue&type=template&id=4ec5b0bb&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/layouts/HomeLayout.vue?vue&type=template&id=1512d0d9&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('header',[_c('div',{staticClass:"brand-wrapper"},[_c('img',{attrs:{"id":"brand-img","src":_vm.brandImg}}),_vm._v(" "),_vm._m(0)]),_vm._v(" "),_c('div',{staticClass:"author-wrapper"},[_c('img',{attrs:{"id":"avatar","src":_vm.avatarImg}}),_vm._v(" "),_c('p',{staticClass:"motto"},[_vm._v("比你瘦的人都在努力学习，你有什么理由不减肥？")])])]),_vm._v(" "),_c('left-right-layout',{attrs:{"affix":"576"}},[_c('div',{attrs:{"slot":"left"},slot:"left"},[_vm._t("content")],2),_vm._v(" "),_c('div',{attrs:{"slot":"right"},slot:"right"},[_c('overview')],1)])],1)}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"brand"},[_c('h1',[_vm._v("Sycamore")])])}]
 
 
-// CONCATENATED MODULE: ./src/layouts/HomeLayout.vue?vue&type=template&id=4ec5b0bb&
+// CONCATENATED MODULE: ./src/layouts/HomeLayout.vue?vue&type=template&id=1512d0d9&
 
 // EXTERNAL MODULE: ./src/assets/swim.jpg
 var swim = __webpack_require__(37);
