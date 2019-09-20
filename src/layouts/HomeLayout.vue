@@ -66,9 +66,11 @@
             }
 
             .brand {
+                position: absolute;
                 z-index: 2;
                 text-align: center;
                 padding: 200px 0 0;
+                width: 100%;
 
                 h1 {
                     color: #fff;

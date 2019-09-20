@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <div id="back-to-top"></div>
         <header-auto-up-down>
             <navigation :navs="navs">
                 <div class="search-wrap">
@@ -144,6 +145,12 @@
     }
 </script>
 <style lang="less">
+    #back-to-top {
+        height: 0;
+        position: absolute;
+        z-index: -1;
+        top: -20px;
+    }
     .search-wrap {
         height: 25px;
         border-bottom: 1px solid #64edac;
