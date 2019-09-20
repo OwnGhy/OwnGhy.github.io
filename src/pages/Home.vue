@@ -16,6 +16,20 @@
                 </div>
                 <article class="preview-content markdown-container" v-html="b.content"></article>
             </div>
+            <div class="pagination">
+                <span @click="prev" class="pagination-op" :data-disabled="cur === 1">
+                    <svg class="pagination-icon" aria-hidden="true">
+                        <use xlink:href="#icon-prev2"></use>
+                    </svg>
+                </span>
+                <span class="pagination-cur">{{cur}}</span>
+                <span @click="next" class="pagination-op" :data-disabled="cur === page">
+                    <svg class="pagination-icon" aria-hidden="true">
+                        <use xlink:href="#icon-next2"></use>
+                    </svg>
+                </span>
+                <span>共 {{page}} 页</span>
+            </div>
         </div>
     </home-layout>
 </template>
@@ -27,9 +41,35 @@
         components: {
             HomeLayout
         },
+        data() {
+            return {
+                cur: 1,
+                pageSize: 10
+            }
+        },
         computed: {
             blogsConfig() {
-                return this.$store.state.blogWithContent
+                return this.$store.state.blogWithContent.slice((this.cur - 1) * this.pageSize, this.cur * this.pageSize)
+            },
+            page() {
+                return Math.ceil(this.$store.state.blogWithContent.length / this.pageSize)
+            }
+        },
+        mounted() {
+            setTimeout(() => {
+                document.getElementById('main').scrollIntoView();
+            }, 300);
+        },
+        methods: {
+            prev() {
+                if (this.cur === 1) return;
+                this.cur = this.cur - 1;
+                document.getElementById('main').scrollIntoView();
+            },
+            next() {
+                if (this.cur === this.page) return;
+                this.cur = this.cur + 1;
+                document.getElementById('main').scrollIntoView();
             }
         }
     }
@@ -61,6 +101,25 @@
             :nth-child(n+6):nth-child(n){
                 display: none;
             }
+        }
+    }
+
+    .pagination {
+        text-align: center;
+        color: #555555;
+
+        .pagination-op {
+            cursor: pointer;
+            &[data-disabled="true"] {
+                cursor: not-allowed;
+            }
+        }
+
+        .pagination-icon {
+            width: 22px;
+            height: 22px;
+            vertical-align: bottom;
+            fill: #555;
         }
     }
 </style>
