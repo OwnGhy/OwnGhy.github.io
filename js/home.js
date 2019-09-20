@@ -24,14 +24,28 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Home.vue?vue&type=template&id=77470c84&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('home-layout',[_c('div',{attrs:{"slot":"content"},slot:"content"},_vm._l((_vm.blogsConfig),function(b){return _c('div',{staticClass:"blog-item card"},[_c('h2',{staticClass:"title"},[_c('router-link',{attrs:{"to":("/blog/" + (b.id))}},[_vm._v(_vm._s(b.title))])],1),_vm._v(" "),_c('div',{staticClass:"info-wrap"},[_c('span',{staticClass:"date"},[_c('svg',{staticClass:"clock-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-clock"}})]),_vm._v("\n                    "+_vm._s(b.date)+"\n                ")]),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v("\n                    "+_vm._s(b.tags)+"\n                ")])]),_vm._v(" "),_c('article',{staticClass:"preview-content markdown-container",domProps:{"innerHTML":_vm._s(b.content)}})])}),0)])}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Home.vue?vue&type=template&id=140e3734&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('home-layout',[_c('div',{attrs:{"slot":"content"},slot:"content"},[_vm._l((_vm.blogsConfig),function(b){return _c('div',{staticClass:"blog-item card"},[_c('h2',{staticClass:"title"},[_c('router-link',{attrs:{"to":("/blog/" + (b.id))}},[_vm._v(_vm._s(b.title))])],1),_vm._v(" "),_c('div',{staticClass:"info-wrap"},[_c('span',{staticClass:"date"},[_c('svg',{staticClass:"clock-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-clock"}})]),_vm._v("\n                    "+_vm._s(b.date)+"\n                ")]),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v("\n                    "+_vm._s(b.tags)+"\n                ")])]),_vm._v(" "),_c('article',{staticClass:"preview-content markdown-container",domProps:{"innerHTML":_vm._s(b.content)}})])}),_vm._v(" "),_c('div',{staticClass:"pagination"},[_c('span',{staticClass:"pagination-op",attrs:{"data-disabled":_vm.cur === 1},on:{"click":_vm.prev}},[_c('svg',{staticClass:"pagination-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-prev2"}})])]),_vm._v(" "),_c('span',{staticClass:"pagination-cur"},[_vm._v(_vm._s(_vm.cur))]),_vm._v(" "),_c('span',{staticClass:"pagination-op",attrs:{"data-disabled":_vm.cur === _vm.page},on:{"click":_vm.next}},[_c('svg',{staticClass:"pagination-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-next2"}})])]),_vm._v(" "),_c('span',[_vm._v("共 "+_vm._s(_vm.page)+" 页")])])],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Home.vue?vue&type=template&id=77470c84&
+// CONCATENATED MODULE: ./src/pages/Home.vue?vue&type=template&id=140e3734&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Home.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -60,9 +74,42 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 3).t
   components: {
     HomeLayout
   },
+
+  data() {
+    return {
+      cur: 1,
+      pageSize: 10
+    };
+  },
+
   computed: {
     blogsConfig() {
-      return this.$store.state.blogWithContent;
+      return this.$store.state.blogWithContent.slice((this.cur - 1) * this.pageSize, this.cur * this.pageSize);
+    },
+
+    page() {
+      return Math.ceil(this.$store.state.blogWithContent.length / this.pageSize);
+    }
+
+  },
+
+  mounted() {
+    setTimeout(() => {
+      document.getElementById('main').scrollIntoView();
+    }, 300);
+  },
+
+  methods: {
+    prev() {
+      if (this.cur === 1) return;
+      this.cur = this.cur - 1;
+      document.getElementById('main').scrollIntoView();
+    },
+
+    next() {
+      if (this.cur === this.page) return;
+      this.cur = this.cur + 1;
+      document.getElementById('main').scrollIntoView();
     }
 
   }
