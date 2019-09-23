@@ -1,6 +1,7 @@
 const Home = () => import(/* webpackChunkName: "home" */'./pages/Home.vue');
 const Timeline = () => import(/* webpackChunkName: "timeline" */'./pages/Timeline.vue');
-const MessageBoard = () => import(/* webpackChunkName: "timeline" */'./pages/MessageBoard.vue');
+const Category = () => import(/* webpackChunkName: "category" */'./pages/Category.vue');
+const MessageBoard = () => import(/* webpackChunkName: "message" */'./pages/MessageBoard.vue');
 // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 const YeahMe = () => import(/* webpackChunkName: "yeahMe" */'./pages/YeahMe.vue');
 const Detail = () => import(/* webpackChunkName: "detail" */'./pages/Detail.vue');
@@ -23,6 +24,12 @@ export default {
             key: 'timeline',
             name: 'timeline',
             component: Timeline
+        },
+        {
+            path: '/category',
+            key: 'category',
+            name: 'category',
+            component: Category
         },
         {
             path: '/message',

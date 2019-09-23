@@ -42,6 +42,12 @@
                         to: '/timeline'
                     },
                     {
+                        title: '分类',
+                        key: 'category',
+                        icon: '#icon-book',
+                        to: '/category'
+                    },
+                    {
                         title: '代码',
                         key: 'code',
                         icon: '#icon-robot',

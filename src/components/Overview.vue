@@ -16,9 +16,9 @@
                 <p>文章</p>
                 <span>{{countBlog}}</span>
             </div>
-            <div class="count-item">
-                <p>分类</p>
-                <span>{{countCategory}}</span>
+            <div class="count-item cate-item">
+                <p><router-link to="/category">分类</router-link></p>
+                <span><router-link to="/category">{{countCategory}}</router-link></span>
             </div>
         </div>
     </div>
@@ -164,6 +164,19 @@
                 font-size: 14px;
                 font-weight: 700;
                 line-height: 18px;
+
+
+                &.cate-item {
+                    a {
+                        color: #555;
+                        text-decoration: none;
+                    }
+                    &:hover {
+                        a {
+                            color: @colorPrimary;
+                        }
+                    }
+                }
 
                 &:first-child {
                     border-right: 1px solid #ccc;
