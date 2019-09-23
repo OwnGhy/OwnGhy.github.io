@@ -97,6 +97,8 @@
 
                     .date {
                         color: #555;
+                        font-family: Menlo;
+                        margin-right: 8px;
                     }
                     
                     .title {

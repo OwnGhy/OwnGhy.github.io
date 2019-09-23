@@ -50,6 +50,12 @@
                         site: 'https://hiwannz.com/',
                         motto: '别再说话，你别烦我',
                         avatar: wangzi
+                    },
+                    {
+                        name: 'xibaXIBAxibaba',
+                        site: 'https://ohiamfine.github.io/',
+                        motto: 'Hurry | Coding',
+                        avatar: 'https://avatars1.githubusercontent.com/u/10390004?s=460&v=4'
                     }
                 ]
             };
