@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <div id="back-to-top"></div>
         <header-auto-up-down>
             <navigation :navs="navs">
                 <div class="search-wrap">
@@ -41,9 +42,15 @@
                         to: '/timeline'
                     },
                     {
+                        title: '分类',
+                        key: 'category',
+                        icon: '#icon-book',
+                        to: '/category'
+                    },
+                    {
                         title: '代码',
                         key: 'code',
-                        icon: '#icon-robot',
+                        icon: '#icon-collect',
                         children: [
                             {
                                 title: 'vue-fun-loading',
@@ -63,16 +70,17 @@
                         icon: '#icon-message',
                         to: '/message'
                     },
+                    {
+                        title: '胖友们',
+                        key: 'friends',
+                        icon: '#icon-robot',
+                        to: '/friends'
+                    },
                     // {
                     //     title: '生活小记',
                     //     key: 'hobby',
                     //     icon: '#icon-find',
                     //     to: '/hobby'
-                    // },
-                    // {
-                    //     title: '友链',
-                    //     key: 'friends',
-                    //     icon: '#icon-collect'
                     // },
                     {
                         title: '耶！我',
@@ -144,6 +152,12 @@
     }
 </script>
 <style lang="less">
+    #back-to-top {
+        height: 0;
+        position: absolute;
+        z-index: -1;
+        top: -20px;
+    }
     .search-wrap {
         height: 25px;
         border-bottom: 1px solid #64edac;

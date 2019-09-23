@@ -7,7 +7,10 @@ Vue.use(Vuex);
 
 let blog = blogs.blog;
 blog = blog.sort((small, big) => +new Date(big.date) - +new Date(small.date));
-const category = Array.from(new Set(blog.map(i => i.tags)));
+const category = Array.from(new Set(blog.map(i => i.tags))).map(tag => ({
+    blog: blog.filter(i => i.tags === tag),
+    tag
+}));
 
 const state = {
     blogsConfig: blog,
