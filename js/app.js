@@ -69,7 +69,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "js/" + ({"1":"detail","2":"home","3":"home-layout","4":"left-right-layout","5":"overview","6":"publisher-JS-md","7":"publisher-React-TS_DVA_Build-md","8":"publisher-Vue-Build_A_Vue_Project-md","9":"publisher-Vue-VUE-npm-md","10":"timeline","12":"yeahMe"}[chunkId]||chunkId) + ".js"
+/******/ 		return __webpack_require__.p + "js/" + ({"1":"category","2":"detail","3":"home","4":"home-layout","5":"left-right-layout","6":"message","7":"overview","8":"publisher-JS-md","9":"publisher-React-TS_DVA_Build-md","10":"publisher-Vue-Build_A_Vue_Project-md","11":"publisher-Vue-VUE-npm-md","12":"timeline","14":"yeahMe"}[chunkId]||chunkId) + ".js"
 /******/ 	}
 /******/
 /******/ 	// The require function
@@ -103,11 +103,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"1":1,"2":1,"3":1,"4":1,"5":1,"10":1};
+/******/ 		var cssChunks = {"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"12":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "css/" + ({"1":"detail","2":"home","3":"home-layout","4":"left-right-layout","5":"overview","6":"publisher-JS-md","7":"publisher-React-TS_DVA_Build-md","8":"publisher-Vue-Build_A_Vue_Project-md","9":"publisher-Vue-VUE-npm-md","10":"timeline","12":"yeahMe"}[chunkId]||chunkId) + ".css";
+/******/ 				var href = "css/" + ({"1":"category","2":"detail","3":"home","4":"home-layout","5":"left-right-layout","6":"message","7":"overview","8":"publisher-JS-md","9":"publisher-React-TS_DVA_Build-md","10":"publisher-Vue-Build_A_Vue_Project-md","11":"publisher-Vue-VUE-npm-md","12":"timeline","14":"yeahMe"}[chunkId]||chunkId) + ".css";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -263,7 +263,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([24,11]);
+/******/ 	deferredModules.push([24,13]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -536,12 +536,12 @@ var vue_runtime_min_default = /*#__PURE__*/__webpack_require__.n(vue_runtime_min
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
 var vue_router_esm = __webpack_require__(9);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=0bddc6e2&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=2e5f0eb8&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{attrs:{"id":"back-to-top"}}),_vm._v(" "),_c('header-auto-up-down',[_c('navigation',{attrs:{"navs":_vm.navs}},[_c('div',{staticClass:"search-wrap"},[_c('input',{staticClass:"search-input",on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.search($event)},"input":_vm.filterChange}}),_vm._v(" "),_c('span',{on:{"click":_vm.search}},[_c('svg',{staticClass:"icon search-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-search"}})])])])])],1),_vm._v(" "),_c('router-view')],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=0bddc6e2&
+// CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=2e5f0eb8&
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/HeaderAutoUpDown.vue?vue&type=template&id=36eed0c5&
 var HeaderAutoUpDownvue_type_template_id_36eed0c5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"header-auto-up-down",attrs:{"id":"header-auto-up-down"}},[_vm._t("default")],2)}
@@ -700,6 +700,11 @@ var Navigation_component = Object(componentNormalizer["a" /* default */])(
         icon: '#icon-calendar',
         to: '/timeline'
       }, {
+        title: '分类',
+        key: 'category',
+        icon: '#icon-book',
+        to: '/category'
+      }, {
         title: '代码',
         key: 'code',
         icon: '#icon-robot',
@@ -824,16 +829,18 @@ var App_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/router.js
-const Home = () => __webpack_require__.e(/* import() | home */ 2).then(__webpack_require__.bind(null, 49));
+const Home = () => __webpack_require__.e(/* import() | home */ 3).then(__webpack_require__.bind(null, 50));
 
-const Timeline = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 50));
+const Timeline = () => __webpack_require__.e(/* import() | timeline */ 12).then(__webpack_require__.bind(null, 53));
 
-const MessageBoard = () => __webpack_require__.e(/* import() | timeline */ 10).then(__webpack_require__.bind(null, 51)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const Category = () => __webpack_require__.e(/* import() | category */ 1).then(__webpack_require__.bind(null, 51));
+
+const MessageBoard = () => __webpack_require__.e(/* import() | message */ 6).then(__webpack_require__.bind(null, 54)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 
 
-const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 12).then(__webpack_require__.bind(null, 47));
+const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 14).then(__webpack_require__.bind(null, 49));
 
-const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__webpack_require__.bind(null, 48));
+const Detail = () => __webpack_require__.e(/* import() | detail */ 2).then(__webpack_require__.bind(null, 52));
 
 /* harmony default export */ var router = ({
   mode: 'hash',
@@ -850,6 +857,11 @@ const Detail = () => __webpack_require__.e(/* import() | detail */ 1).then(__web
     key: 'timeline',
     name: 'timeline',
     component: Timeline
+  }, {
+    path: '/category',
+    key: 'category',
+    name: 'category',
+    component: Category
   }, {
     path: '/message',
     key: 'message',
@@ -890,7 +902,10 @@ var tools = __webpack_require__(10);
 vue_runtime_min_default.a.use(vuex_esm["a" /* default */]);
 let store_blog = blog.blog;
 store_blog = store_blog.sort((small, big) => +new Date(big.date) - +new Date(small.date));
-const category = Array.from(new Set(store_blog.map(i => i.tags)));
+const category = Array.from(new Set(store_blog.map(i => i.tags))).map(tag => ({
+  blog: store_blog.filter(i => i.tags === tag),
+  tag
+}));
 const state = {
   blogsConfig: store_blog,
   blogWithContent: [],
