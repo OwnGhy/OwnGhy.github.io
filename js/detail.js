@@ -11,21 +11,37 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./JS/正则实用技巧记录.md": [
+	"./Babel/Babel理解.md": [
 		48,
 		9
 	],
-	"./React/TS_DVA_Build.md": [
+	"./JS/正则实用技巧记录.md": [
 		49,
 		10
 	],
-	"./Vue/Build_A_Vue_Project.md": [
+	"./React/React单元测试记录之Jest 与 Enzyme.md": [
 		50,
 		11
 	],
-	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
+	"./React/TS_DVA_Build.md": [
 		51,
 		12
+	],
+	"./Vue/Build_A_Vue_Project.md": [
+		52,
+		13
+	],
+	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
+		53,
+		14
+	],
+	"./Web Components/WebComponents初识.md": [
+		54,
+		15
+	],
+	"./Web Components/WebComponents实践.md": [
+		55,
+		15
 	]
 };
 function webpackAsyncContext(req) {
@@ -61,7 +77,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 56:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126,7 +142,7 @@ var tools = __webpack_require__(10);
 //
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 61));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 65));
 
 /* harmony default export */ var Detailvue_type_script_lang_js_ = ({
   name: 'detail',

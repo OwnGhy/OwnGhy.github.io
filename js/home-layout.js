@@ -32,7 +32,7 @@ module.exports = "data:image/jpeg;base64,/9j/2wCEAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBk
 
 /***/ }),
 
-/***/ 60:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81,9 +81,9 @@ var avatar_default = /*#__PURE__*/__webpack_require__.n(avatar);
 
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 61));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 65));
 
-const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 59));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 64));
 
 /* harmony default export */ var HomeLayoutvue_type_script_lang_js_ = ({
   name: 'home-layout',
