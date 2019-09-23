@@ -19,13 +19,13 @@
             <div class="pagination">
                 <span @click="prev" class="pagination-op" :data-disabled="cur === 1">
                     <svg class="pagination-icon" aria-hidden="true">
-                        <use xlink:href="#icon-prev2"></use>
+                        <use xlink:href="#icon-prev"></use>
                     </svg>
                 </span>
                 <span class="pagination-cur">{{cur}}</span>
                 <span @click="next" class="pagination-op" :data-disabled="cur === page">
                     <svg class="pagination-icon" aria-hidden="true">
-                        <use xlink:href="#icon-next2"></use>
+                        <use xlink:href="#icon-next"></use>
                     </svg>
                 </span>
                 <span>共 {{page}} 页</span>

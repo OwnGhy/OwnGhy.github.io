@@ -50,7 +50,7 @@
                     {
                         title: '代码',
                         key: 'code',
-                        icon: '#icon-robot',
+                        icon: '#icon-collect',
                         children: [
                             {
                                 title: 'vue-fun-loading',
@@ -70,16 +70,17 @@
                         icon: '#icon-message',
                         to: '/message'
                     },
+                    {
+                        title: '胖友们',
+                        key: 'friends',
+                        icon: '#icon-robot',
+                        to: '/friends'
+                    },
                     // {
                     //     title: '生活小记',
                     //     key: 'hobby',
                     //     icon: '#icon-find',
                     //     to: '/hobby'
-                    // },
-                    // {
-                    //     title: '友链',
-                    //     key: 'friends',
-                    //     icon: '#icon-collect'
                     // },
                     {
                         title: '耶！我',
