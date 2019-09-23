@@ -7,7 +7,7 @@
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 51:
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,9 +52,9 @@ var staticRenderFns = []
 //
 //
 //
-const Overview = () => __webpack_require__.e(/* import() | overview */ 7).then(__webpack_require__.bind(null, 55));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 59));
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 5).then(__webpack_require__.bind(null, 57));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 61));
 
 /* harmony default export */ var Categoryvue_type_script_lang_js_ = ({
   name: 'category',
@@ -72,7 +72,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
 // CONCATENATED MODULE: ./src/pages/Category.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_Categoryvue_type_script_lang_js_ = (Categoryvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./src/pages/Category.vue?vue&type=style&index=0&lang=less&
-var Categoryvue_type_style_index_0_lang_less_ = __webpack_require__(35);
+var Categoryvue_type_style_index_0_lang_less_ = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);

@@ -1,31 +1,31 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
 
-/***/ 29:
+/***/ 30:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 37:
+/***/ 40:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"./JS/正则实用技巧记录.md": [
-		45,
-		8
-	],
-	"./React/TS_DVA_Build.md": [
-		46,
+		48,
 		9
 	],
-	"./Vue/Build_A_Vue_Project.md": [
-		47,
+	"./React/TS_DVA_Build.md": [
+		49,
 		10
 	],
-	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
-		48,
+	"./Vue/Build_A_Vue_Project.md": [
+		50,
 		11
+	],
+	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
+		51,
+		12
 	]
 };
 function webpackAsyncContext(req) {
@@ -45,23 +45,23 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 37;
+webpackAsyncContext.id = 40;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 38:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_node_modules_sass_resources_loader_lib_loader_js_ref_3_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Detail_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(29);
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_node_modules_sass_resources_loader_lib_loader_js_ref_3_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Detail_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
 /* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_node_modules_sass_resources_loader_lib_loader_js_ref_3_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Detail_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_node_modules_sass_resources_loader_lib_loader_js_ref_3_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Detail_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0__);
 /* unused harmony reexport * */
  /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_node_modules_css_loader_index_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_less_loader_dist_cjs_js_node_modules_sass_resources_loader_lib_loader_js_ref_3_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Detail_vue_vue_type_style_index_0_lang_less___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ 52:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -126,7 +126,7 @@ var tools = __webpack_require__(10);
 //
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 5).then(__webpack_require__.bind(null, 57));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 61));
 
 /* harmony default export */ var Detailvue_type_script_lang_js_ = ({
   name: 'detail',
@@ -142,7 +142,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
 
   methods: {
     async getDetail(path) {
-      let md = await __webpack_require__(37)(`./${path.split('/publishers/')[1]}`);
+      let md = await __webpack_require__(40)(`./${path.split('/publishers/')[1]}`);
       return Object(tools["a" /* formatByMarked */])(md.default);
     },
 
@@ -187,7 +187,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
 // CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_Detailvue_type_script_lang_js_ = (Detailvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./src/pages/Detail.vue?vue&type=style&index=0&lang=less&
-var Detailvue_type_style_index_0_lang_less_ = __webpack_require__(38);
+var Detailvue_type_style_index_0_lang_less_ = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
