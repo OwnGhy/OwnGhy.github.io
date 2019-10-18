@@ -37,7 +37,7 @@
                     },
                     {
                         title: '时间轴',
-                        key: 'calendar',
+                        key: 'timeline',
                         icon: '#icon-calendar',
                         to: '/timeline'
                     },
@@ -84,7 +84,7 @@
                     // },
                     {
                         title: '耶！我',
-                        key: 'me',
+                        key: 'yeah-me',
                         icon: '#icon-person',
                         to: '/yeah-me'
                     }
