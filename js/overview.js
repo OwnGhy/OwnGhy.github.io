@@ -31,12 +31,12 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA9EAAAIlCAMAAADl
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Overview.vue?vue&type=template&id=517c47d2&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Overview.vue?vue&type=template&id=7c3c52fe&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"overview"},[_c('div',{staticClass:"catch-me"},[_c('img',{attrs:{"id":"catch-pic","src":_vm.catchImg}}),_vm._v(" "),_c('p',{staticClass:"catch-label"},[_vm._v("Can you catch me?")]),_vm._v(" "),_c('div',{staticClass:"catch-wrap"},_vm._l((this.catch),function(c){return _c('a',{key:c.icon,staticClass:"catch-item",attrs:{"target":"_blank","data-tip":c.tip,"href":c.url}},[_c('svg',{staticClass:"icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":("#icon-" + (c.icon))}})])])}),0)]),_vm._v(" "),_c('div',{staticClass:"blog-count"},[_c('div',{staticClass:"count-item"},[_c('p',[_vm._v("文章")]),_vm._v(" "),_c('span',[_vm._v(_vm._s(_vm.countBlog))])]),_vm._v(" "),_c('div',{staticClass:"count-item cate-item"},[_c('p',[_c('router-link',{attrs:{"to":"/category"}},[_vm._v("分类")])],1),_vm._v(" "),_c('span',[_c('router-link',{attrs:{"to":"/category"}},[_vm._v(_vm._s(_vm.countCategory))])],1)])])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Overview.vue?vue&type=template&id=517c47d2&
+// CONCATENATED MODULE: ./src/components/Overview.vue?vue&type=template&id=7c3c52fe&
 
 // EXTERNAL MODULE: ./src/assets/pages/catch.png
 var pages_catch = __webpack_require__(45);
@@ -90,6 +90,16 @@ var catch_default = /*#__PURE__*/__webpack_require__.n(pages_catch);
         icon: 'github',
         tip: 'Github',
         url: 'https://github.com/OwnGhy'
+      }, {
+        name: '掘金',
+        icon: 'juejin',
+        tip: '掘金',
+        url: 'https://juejin.im/user/59b95d216fb9a00a4e6786db'
+      }, {
+        name: '简书',
+        icon: 'jianshu',
+        tip: '简书',
+        url: 'https://www.jianshu.com/u/4ec1891aa5c9'
       }, {
         name: '微博',
         icon: 'weibo',
