@@ -47,6 +47,18 @@
                         url: 'https://github.com/OwnGhy'
                     },
                     {
+                        name: '掘金',
+                        icon: 'juejin',
+                        tip: '掘金',
+                        url: 'https://juejin.im/user/59b95d216fb9a00a4e6786db'
+                    },
+                    {
+                        name: '简书',
+                        icon: 'jianshu',
+                        tip: '简书',
+                        url: 'https://www.jianshu.com/u/4ec1891aa5c9'
+                    },
+                    {
                         name: '微博',
                         icon: 'weibo',
                         tip: '微博',
