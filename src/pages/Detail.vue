@@ -12,12 +12,6 @@
                                 </svg>
                                 {{detail.date}}
                             </span>
-                            <!--<span id="busuanzi_container_page_pv">-->
-                                <!--<span class="read-icon">-->
-                                    <!--阅读-->
-                                <!--</span>-->
-                                <!--<span id="busuanzi_value_page_pv"></span>-->
-                            <!--</span>-->
                             <span class="tag">
                                 {{detail.tags}}
                             </span>
@@ -104,6 +98,8 @@
             });
 
             document.title = `${detail.title} - Sycamore`;
+            const keywords = document.querySelector("meta[name=keywords]");
+            keywords.setAttribute('content', `Sycamore,blog,${detail.tags}`);
         },
     }
 </script>
