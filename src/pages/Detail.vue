@@ -16,7 +16,7 @@
                                 <span class="read-icon">
                                     阅读
                                 </span>
-                                <span id="busuanzi_value_page_pv">0</span>
+                                <span id="busuanzi_value_page_pv"></span>
                             </span>
                             <span class="tag">
                                 {{detail.tags}}
