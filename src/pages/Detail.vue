@@ -102,6 +102,8 @@
 
                 gitalk.render('comment-wrap');
             });
+
+            document.title = `${detail.title} - Sycamore`;
         },
     }
 </script>
