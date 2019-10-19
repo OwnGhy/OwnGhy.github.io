@@ -167,10 +167,11 @@
             text-align: center;
             margin-top: 16px;
             .count-item {
-                width: 48%;
+                width: 30%;
                 padding: 8px 8px 6px;
                 display: inline-block;
                 box-sizing: border-box;
+                border-right: 1px solid #ccc;
 
                 color: #555;
                 font-size: 14px;
@@ -190,8 +191,8 @@
                     }
                 }
 
-                &:first-child {
-                    border-right: 1px solid #ccc;
+                &:last-child {
+                    border-right: unset;
                 }
 
                 > p {
