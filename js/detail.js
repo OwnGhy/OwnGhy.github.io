@@ -83,23 +83,17 @@ module.exports = webpackAsyncContext;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=5d893122&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=7c0e108a&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"detail-container"},[_c('left-right-layout',{attrs:{"affix":""}},[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"blog-title"},[_c('h2',{staticClass:"title"},[_vm._v(_vm._s(_vm.detail.title))]),_vm._v(" "),_c('div',{staticClass:"info-wrap"},[_c('span',{staticClass:"date"},[_c('svg',{staticClass:"clock-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-clock"}})]),_vm._v("\n                            "+_vm._s(_vm.detail.date)+"\n                        ")]),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v("\n                            "+_vm._s(_vm.detail.tags)+"\n                        ")])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"markdown-container",domProps:{"innerHTML":_vm._s(_vm.detail.content)}}):_vm._e()]),_vm._v(" "),_c('div',{attrs:{"id":"comment-wrap"}}),_vm._v(" "),_c('div',{staticClass:"fix-tool"},[_c('span',{on:{"click":_vm.backToTop}},[_c('svg',{staticClass:"back-top",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-top"}})])]),_vm._v(" "),_c('div',{staticClass:"to-comment",on:{"click":_vm.toComment}},[_c('svg',{staticClass:"comment-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-comment1"}})])])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"toc",attrs:{"slot":"right"},domProps:{"innerHTML":_vm._s(_vm.detail.tocHtml)},slot:"right"}):_vm._e()])],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=5d893122&
+// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=7c0e108a&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
 var tools = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -198,6 +192,8 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
       gitalk.render('comment-wrap');
     });
     document.title = `${detail.title} - Sycamore`;
+    const keywords = document.querySelector("meta[name=keywords]");
+    keywords.setAttribute('content', `Sycamore,blog,${detail.tags}`);
   }
 
 });
