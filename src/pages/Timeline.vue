@@ -1,5 +1,5 @@
 <template>
-    <left-right-layout affix="576" class="timeline-container">
+    <left-right-layout affix="" class="timeline-container">
         <div slot="left" class="timeline-content card">
             <div class="timeline-item" v-for="i in timelineBlog">
                 <p class="timeline-year">{{i.year}}</p>
@@ -72,7 +72,7 @@
 </script>
 <style lang="less">
     .timeline-container {
-        margin-top: 45px;
+        margin-top: 45px !important;
 
         .timeline-content {
             .timeline-item {

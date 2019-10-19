@@ -8,7 +8,7 @@ hljs.registerLanguage('javascript', javascript);
 hljs.registerLanguage('css', css);
 hljs.registerLanguage('bash', bash);
 
-const tocObj = {
+let tocObj = {
     toc: [],
     index: 0,
     add: function (text, level) {
@@ -56,6 +56,7 @@ const tocObj = {
 
 export const formatByMarked = (mdStr) => {
     let rendererMD = new marked.Renderer();
+    tocObj.toc = [];
     rendererMD.heading = function (text, level) {
         if (level <= 4) {
             const anchor = tocObj.add(text, level);

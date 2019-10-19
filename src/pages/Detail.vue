@@ -12,12 +12,6 @@
                                 </svg>
                                 {{detail.date}}
                             </span>
-                            <span id="busuanzi_container_page_pv">
-                                <span class="read-icon">
-                                    阅读
-                                </span>
-                                <span id="busuanzi_value_page_pv">0</span>
-                            </span>
                             <span class="tag">
                                 {{detail.tags}}
                             </span>
@@ -102,7 +96,11 @@
 
                 gitalk.render('comment-wrap');
             });
-        }
+
+            document.title = `${detail.title} - Sycamore`;
+            const keywords = document.querySelector("meta[name=keywords]");
+            keywords.setAttribute('content', `Sycamore,blog,${detail.tags}`);
+        },
     }
 </script>
 <style lang="less">
@@ -129,7 +127,7 @@
                         vertical-align: middle;
                         fill: @colorPrimary;
                     }
-                    margin-right: 12px;
+                    /*margin-right: 12px;*/
                 }
 
                 .read-icon {

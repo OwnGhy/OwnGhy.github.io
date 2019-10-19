@@ -1,14 +1,14 @@
 <template>
     <nav>
         <ul class="navigation">
-            <li class="navigation-item" v-for="nav in navs" :key="nav.key">
+            <li v-for="nav in navs" :key="nav.key" :class="`navigation-item ${active === nav.key ? 'navigation-item-actived' : ''}`">
                 <router-link :to="nav.to || '#'">
                     <svg class="icon" aria-hidden="true">
                         <use :xlink:href="nav.icon"></use>
                     </svg>
                     {{nav.title}}
                     <ul class="navigation-dropdown" v-if="nav.children && nav.children.length">
-                        <li class="navigation-dropdown-item" v-for="dropdown in nav.children" :key="dropdown.key" @click="jumpTo(dropdown.url)">
+                        <li class="navigation-dropdown-item" v-for="dropdown in nav.children" :key="dropdown.key" @click="jumpTo(dropdown.url)" >
                             {{dropdown.title}}
                         </li>
                     </ul>
@@ -32,7 +32,23 @@
         methods: {
             jumpTo(url) {
                 window.open(url);
+            },
+            getActive() {
+                const hash = window.location.hash;
+
+                return (this.navs.find(r => hash.includes(r.key)) || {key: ''}).key;
             }
+        },
+        data() {
+            return {
+                active: ''
+            }
+        },
+        beforeUpdate() {
+            this.active = this.getActive();
+        },
+        mounted() {
+            this.active = this.getActive();
         }
     }
 </script>
@@ -66,6 +82,10 @@
                     .navigation-dropdown {
                         display: block;
                     }
+                }
+
+                &.navigation-item-actived {
+                    background-color: rgba(111, 111, 111, .5);
                 }
 
                 .icon {

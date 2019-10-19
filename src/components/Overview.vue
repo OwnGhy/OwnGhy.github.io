@@ -47,6 +47,18 @@
                         url: 'https://github.com/OwnGhy'
                     },
                     {
+                        name: '掘金',
+                        icon: 'juejin',
+                        tip: '掘金',
+                        url: 'https://juejin.im/user/59b95d216fb9a00a4e6786db'
+                    },
+                    {
+                        name: '简书',
+                        icon: 'jianshu',
+                        tip: '简书',
+                        url: 'https://www.jianshu.com/u/4ec1891aa5c9'
+                    },
+                    {
                         name: '微博',
                         icon: 'weibo',
                         tip: '微博',
@@ -155,10 +167,11 @@
             text-align: center;
             margin-top: 16px;
             .count-item {
-                width: 48%;
+                width: 30%;
                 padding: 8px 8px 6px;
                 display: inline-block;
                 box-sizing: border-box;
+                border-right: 1px solid #ccc;
 
                 color: #555;
                 font-size: 14px;
@@ -178,8 +191,8 @@
                     }
                 }
 
-                &:first-child {
-                    border-right: 1px solid #ccc;
+                &:last-child {
+                    border-right: unset;
                 }
 
                 > p {
