@@ -12,12 +12,12 @@
                                 </svg>
                                 {{detail.date}}
                             </span>
-                            <span id="busuanzi_container_page_pv">
-                                <span class="read-icon">
-                                    阅读
-                                </span>
-                                <span id="busuanzi_value_page_pv"></span>
-                            </span>
+                            <!--<span id="busuanzi_container_page_pv">-->
+                                <!--<span class="read-icon">-->
+                                    <!--阅读-->
+                                <!--</span>-->
+                                <!--<span id="busuanzi_value_page_pv"></span>-->
+                            <!--</span>-->
                             <span class="tag">
                                 {{detail.tags}}
                             </span>
@@ -102,7 +102,7 @@
 
                 gitalk.render('comment-wrap');
             });
-        }
+        },
     }
 </script>
 <style lang="less">
@@ -129,7 +129,7 @@
                         vertical-align: middle;
                         fill: @colorPrimary;
                     }
-                    margin-right: 12px;
+                    /*margin-right: 12px;*/
                 }
 
                 .read-icon {
