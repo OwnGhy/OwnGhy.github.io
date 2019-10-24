@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 57:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32,7 +32,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./src/pages/Timeline.vue?vue&type=template&id=0ecd659a&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
-var tools = __webpack_require__(10);
+var tools = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Timeline.vue?vue&type=script&lang=js&
 //
@@ -54,9 +54,9 @@ var tools = __webpack_require__(10);
 //
 
 
-const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 64));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 65));
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 65));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 66));
 
 /* harmony default export */ var Timelinevue_type_script_lang_js_ = ({
   name: 'home',
@@ -66,7 +66,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
   },
   methods: {
     getMonthDate(date) {
-      return Object(tools["b" /* getMonthDate */])(date);
+      return Object(tools["c" /* getMonthDate */])(date);
     }
 
   },

@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 59:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ var staticRenderFns = []
 //
 //
 //
-const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 63));
+const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 64));
 
 /* harmony default export */ var MessageBoardvue_type_script_lang_js_ = ({
   name: 'message_board',

@@ -291,16 +291,14 @@
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return formatByMarked; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getMonthDate; });
-/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return formatByMarked; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getMonthDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return escape2Html; });
+/* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 /* harmony import */ var marked__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(marked__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var highlight_js_lib_highlight__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 /* harmony import */ var highlight_js_lib_highlight__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_highlight__WEBPACK_IMPORTED_MODULE_1__);
@@ -413,12 +411,29 @@ const getMonthDate = date => {
   let day = tempDate.getDate();
   return `${month > 9 ? '' : '0'}${month}.${day > 9 ? '' : '0'}${day}`;
 };
+const escape2Html = str => {
+  let arrEntities = {
+    'lt': '<',
+    'gt': '>',
+    'nbsp': ' ',
+    'amp': '&',
+    'quot': '"',
+    '#x60': '`',
+    '#x3D': '≠'
+  };
+  return str.replace(/&(lt|gt|nbsp|amp|quot|#x60|#x3D);/ig, function (all, t) {
+    return arrEntities[t];
+  });
+};
 
 /***/ }),
+/* 8 */,
+/* 9 */,
+/* 10 */,
 /* 11 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"blog\":[{\"tags\":\"Babel\",\"id\":\"554a108141deec1d52b1af246df7f0bb\",\"path\":\"/publishers/Babel/Babel理解.md\",\"outline\":\"&lt;!--title: Babel 理解--&gt;\\n&lt;!--date: 2019.7.9--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n本文只是出于记录自己在理解 babel 时对一些概念的整理，参考了很多文章，出于记录的目的。\\n\\n官网：[https://babel.docschina.org/docs/en/](https://babel.docschina.org/docs/en/)\\n\\n## 前言\\n对于 Babel 的理解，目前还只停留在能够将 ES6 的代码转成 ES5 的（其实这样理解是不准确的），用于解决不同浏览器以及浏览器版本对 ES6 支持的兼容问题。至于之前怎么用 Babel，目前为止还只是停留在表面应用，添加 Babel 配置或者是配合 Webpack 使用；但为什么这样使用？以及 Babel 的一些包都不是很理解怎么分类的。\\n\\n所以，反问一下自己真的会用 Babel 吗？\\n\\n\",\"title\":\"Babel 理解\",\"date\":\"2019.7.9\",\"cate\":\"1\"},{\"tags\":\"JS\",\"id\":\"5de4a66b5c6bca2cc8d2da8793ca9bfc\",\"path\":\"/publishers/JS/正则实用技巧记录.md\",\"outline\":\"&lt;!--title: JS正则实践记录--&gt;\\n&lt;!--date: 2018.12.11--&gt;\\n&lt;!--cate: 1--&gt;\\n正则一直是我的弱项，基本的知识看了好几遍，但是当需求来了的时候，往往还是不能正确的使用正则去处理问题，常常都是在网上搜索的答案😢。\\n\\n为了掌握正则，在这里记录自己平时遇到的一些正则需求，以及使用方法，通过越来越多的使用，希望能真的掌握正则。\\n\\n另：由于我基础真的不好，所以都写得很基础😢，目的在于能巩固一下。&#x60;啰嗦预警~&#x60;\\n\\n&gt; 关于正则的概念与基础的学习，可以参考这篇文章[JS正则表达式完整教程（略长）](https://juejin.im/post/5965943ff265da6c30653879#heading-0)，写得比较系统完整，非常棒呀，终于系统的学习正则了。\\n\\n\",\"title\":\"JS正则实践记录\",\"date\":\"2018.12.11\",\"cate\":\"1\"},{\"tags\":\"React\",\"id\":\"6ae934fb4985084841c7ad571205ce76\",\"path\":\"/publishers/React/React单元测试记录之Jest 与 Enzyme.md\",\"outline\":\"&lt;!--title: React单元测试记录之Jest 与 Enzyme--&gt;\\n&lt;!--date: 2018.8.24--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n### 学习以及参考文章\\n官方：\\n1. [Jest文档](https://jestjs.io/docs/en/getting-started)\\n2. [Enzyme文档](https://airbnb.io/enzyme/)\\n3. [React官方测试说明](https://doc.react-china.org/docs/test-renderer.html)\\n4. [JEST 官方对于React测试的说明](https://jestjs.io/docs/en/tutorial-react)\\n\\n\",\"title\":\"React单元测试记录之Jest 与 Enzyme\",\"date\":\"2018.8.24\",\"cate\":\"1\"},{\"tags\":\"React\",\"id\":\"a881339d2334ab95bea36b0e7ef27ac4\",\"path\":\"/publishers/React/TS_DVA_Build.md\",\"outline\":\"&lt;!--title: dva + typescript开发环境搭建--&gt;\\n&lt;!--date: 2019.02.28--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n## 初始化项目\\n创建项目并进入项目使用npm命令初始化：\\n\\n&#x60;&#x60;&#x60;bash\\nmkdir dva-typescript &amp;&amp; cd dva-typescript\\nnpm init\\n&#x60;&#x60;&#x60;\\n\",\"title\":\"dva + typescript开发环境搭建\",\"date\":\"2019.02.28\",\"cate\":\"1\"},{\"tags\":\"Vue\",\"id\":\"00d6c8279e608a7a4b17a1b846993638\",\"path\":\"/publishers/Vue/Build_A_Vue_Project.md\",\"outline\":\"&lt;!--title: 从零搭建一个vue项目--&gt;\\n&lt;!--date: 2019.04.28--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。\\n\\n&#x60;由于是真的从零开始，所以长文预警！！！😂&#x60;\\n\\n## 初始化项目\\n首先☝️，在命令行中创建文件夹并进入，使用npm命令初始化项目：\\n\\n\",\"title\":\"从零搭建一个vue项目\",\"date\":\"2019.04.28\",\"cate\":\"1\"},{\"tags\":\"Vue\",\"id\":\"ced66d7a62cc357bab8b43b849bb68b8\",\"path\":\"/publishers/Vue/轻轻松松开发一个VUE插件并发布到npm.md\",\"outline\":\"&lt;!--title: 轻轻松松开发一个VUE插件并发布到npm--&gt;\\n&lt;!--date: 2019.05.06--&gt;\\n&lt;!--cate: 1--&gt;\\n一直想了解如何发布一个npm包，然后也很想学习怎么开发一个vue插件，但是一直没有动手去做，最近对自己有点失望，💪卯足了劲终于动手做了一个还比较满意的插件。\\n\\n&gt; 在开发这个插件的时候，项目搭建是自己从头开始写的，所以记录了一下，可以参考[从零搭建一个vue项目](https://juejin.im/post/5cc580215188257feb01cad8#heading-0)\\n\\n### 初始化项目\\n创建文件夹并初始化：\\n\",\"title\":\"轻轻松松开发一个VUE插件并发布到npm\",\"date\":\"2019.05.06\",\"cate\":\"1\"},{\"tags\":\"Web Components\",\"id\":\"4d8099be25abb6b468172d250bc4f277\",\"path\":\"/publishers/Web Components/WebComponents初识.md\",\"outline\":\"&lt;!--title: Web Components 之初识--&gt;\\n&lt;!--date: 2019.6.24--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n## 发展史\\n&gt; 关于发展史，可以看看廖雪峰大大的[MVVM 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001475449022563a6591e6373324d1abd93e0e3fa04397f000)文章，是从前端的发展史开始讲到mvvm的，能让我们很好的理解前端的发胀，以及思考web Components相对于以前的开发方式有什么不同。\\n\\n### 原生JS和jQuery\\n最早，html页面是完全静态的，只需要编写好html文件放到Web服务器上即可。\\n\\n\",\"title\":\"Web Components 之初识\",\"date\":\"2019.6.24\",\"cate\":\"1\"},{\"tags\":\"Web Components\",\"id\":\"f7331174a163c3972f78892cc42fd118\",\"path\":\"/publishers/Web Components/WebComponents实践.md\",\"outline\":\"&lt;!--title: Web Components 之实践--&gt;\\n&lt;!--date: 2019.7.1--&gt;\\n&lt;!--cate: 1--&gt;\\n在上一篇中学习了一些 Web Components 的基本概念（[WebComponents初识](./WebComponents初识.md)），这一篇主要是实践一下怎么使用 Web Components 的API。\\n\\n## 自定义元素\\n首先，这里实现一个 WordCount 自定义标签的例子，用于统计当前标签的字数，在当前标签最后标识字数。\\n\\n核心代码如下，创建了一个 WordCount 的类，继承于&#x60;HTMLElement&#x60;，然后在里面添加了一个内容为字数的 span 标签，并添加到当前元素的最后。\\n\\n\",\"title\":\"Web Components 之实践\",\"date\":\"2019.7.1\",\"cate\":\"1\"}]}");
+module.exports = JSON.parse("{\"blog\":[{\"tags\":\"Babel\",\"id\":\"554a108141deec1d52b1af246df7f0bb\",\"path\":\"/publishers/Babel/Babel理解.md\",\"outline\":\"&lt;!--title: Babel 理解--&gt;\\n&lt;!--date: 2019.7.9--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n本文只是出于记录自己在理解 babel 时对一些概念的整理，参考了很多文章，出于记录的目的。\\n\\n官网：[https://babel.docschina.org/docs/en/](https://babel.docschina.org/docs/en/)\\n\\n## 前言\\n对于 Babel 的理解，目前还只停留在能够将 ES6 的代码转成 ES5 的（其实这样理解是不准确的），用于解决不同浏览器以及浏览器版本对 ES6 支持的兼容问题。至于之前怎么用 Babel，目前为止还只是停留在表面应用，添加 Babel 配置或者是配合 Webpack 使用；但为什么这样使用？以及 Babel 的一些包都不是很理解怎么分类的。\\n\\n所以，反问一下自己真的会用 Babel 吗？\\n\\n\",\"title\":\"Babel 理解\",\"date\":\"2019.7.9\",\"cate\":\"1\"},{\"tags\":\"JS\",\"id\":\"5de4a66b5c6bca2cc8d2da8793ca9bfc\",\"path\":\"/publishers/JS/正则实用技巧记录.md\",\"outline\":\"&lt;!--title: JS正则实践记录--&gt;\\n&lt;!--date: 2018.12.11--&gt;\\n&lt;!--cate: 1--&gt;\\n正则一直是我的弱项，基本的知识看了好几遍，但是当需求来了的时候，往往还是不能正确的使用正则去处理问题，常常都是在网上搜索的答案😢。\\n\\n为了掌握正则，在这里记录自己平时遇到的一些正则需求，以及使用方法，通过越来越多的使用，希望能真的掌握正则。\\n\\n另：由于我基础真的不好，所以都写得很基础😢，目的在于能巩固一下。&#x60;啰嗦预警~&#x60;\\n\\n&gt; 关于正则的概念与基础的学习，可以参考这篇文章[JS正则表达式完整教程（略长）](https://juejin.im/post/5965943ff265da6c30653879#heading-0)，写得比较系统完整，非常棒呀，终于系统的学习正则了。\\n\\n\",\"title\":\"JS正则实践记录\",\"date\":\"2018.12.11\",\"cate\":\"1\"},{\"tags\":\"JS\",\"id\":\"198a1d34fcbe849e0ab0d325084386c5\",\"path\":\"/publishers/JS/用过 ≠ 掌握之文件上传.md\",\"outline\":\"&lt;!--title: 用过 &#x3D;̸ 掌握之文件上传--&gt;\\n&lt;!--date: 2019.10.23--&gt;\\n&lt;!--cate: 1--&gt;\\n在开发中，虽然经常借助组件库 or 工具库实现了很多业务功能，但往往都没有去探究过原理或者自己手动实现过。虽然在敏捷开发过程中，不要重复造轮子才能满足敏捷开发的快节奏的需求。但是学习其中的原理能对我们的水平有很大的提升。\\n\\n为了让自己坚持下去，不让自己成为一个 **API 调用师**，立一个 flag，每周至少学习一个**用过 ≠ 掌握**的知识，会陆陆续续出这个系列的笔记。\\n\\n进入正题。\\n\\n正好今天看到一篇文件上传很完整的博客，所以对这方面做一个知识整理。\\n\",\"title\":\"用过 &#x3D;̸ 掌握之文件上传\",\"date\":\"2019.10.23\",\"cate\":\"1\"},{\"tags\":\"React\",\"id\":\"6ae934fb4985084841c7ad571205ce76\",\"path\":\"/publishers/React/React单元测试记录之Jest 与 Enzyme.md\",\"outline\":\"&lt;!--title: React单元测试记录之Jest 与 Enzyme--&gt;\\n&lt;!--date: 2018.8.24--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n### 学习以及参考文章\\n官方：\\n1. [Jest文档](https://jestjs.io/docs/en/getting-started)\\n2. [Enzyme文档](https://airbnb.io/enzyme/)\\n3. [React官方测试说明](https://doc.react-china.org/docs/test-renderer.html)\\n4. [JEST 官方对于React测试的说明](https://jestjs.io/docs/en/tutorial-react)\\n\\n\",\"title\":\"React单元测试记录之Jest 与 Enzyme\",\"date\":\"2018.8.24\",\"cate\":\"1\"},{\"tags\":\"React\",\"id\":\"a881339d2334ab95bea36b0e7ef27ac4\",\"path\":\"/publishers/React/TS_DVA_Build.md\",\"outline\":\"&lt;!--title: dva + typescript开发环境搭建--&gt;\\n&lt;!--date: 2019.02.28--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n## 初始化项目\\n创建项目并进入项目使用npm命令初始化：\\n\\n&#x60;&#x60;&#x60;bash\\nmkdir dva-typescript &amp;&amp; cd dva-typescript\\nnpm init\\n&#x60;&#x60;&#x60;\\n\",\"title\":\"dva + typescript开发环境搭建\",\"date\":\"2019.02.28\",\"cate\":\"1\"},{\"tags\":\"Vue\",\"id\":\"00d6c8279e608a7a4b17a1b846993638\",\"path\":\"/publishers/Vue/Build_A_Vue_Project.md\",\"outline\":\"&lt;!--title: 从零搭建一个vue项目--&gt;\\n&lt;!--date: 2019.04.28--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n最近感觉自己越来越像一个API调用程序员，很多基础的原理以及项目构建都没实际操作过，所以这里动手自己去搭建了一个vue项目，从webpack配置到vue配置，以及构建的优化，虽然写得并不好，但是自己在这个过程中也学到了一些东西，以此记录。\\n\\n&#x60;由于是真的从零开始，所以长文预警！！！😂&#x60;\\n\\n## 初始化项目\\n首先☝️，在命令行中创建文件夹并进入，使用npm命令初始化项目：\\n\\n\",\"title\":\"从零搭建一个vue项目\",\"date\":\"2019.04.28\",\"cate\":\"1\"},{\"tags\":\"Vue\",\"id\":\"ced66d7a62cc357bab8b43b849bb68b8\",\"path\":\"/publishers/Vue/轻轻松松开发一个VUE插件并发布到npm.md\",\"outline\":\"&lt;!--title: 轻轻松松开发一个VUE插件并发布到npm--&gt;\\n&lt;!--date: 2019.05.06--&gt;\\n&lt;!--cate: 1--&gt;\\n一直想了解如何发布一个npm包，然后也很想学习怎么开发一个vue插件，但是一直没有动手去做，最近对自己有点失望，💪卯足了劲终于动手做了一个还比较满意的插件。\\n\\n&gt; 在开发这个插件的时候，项目搭建是自己从头开始写的，所以记录了一下，可以参考[从零搭建一个vue项目](https://juejin.im/post/5cc580215188257feb01cad8#heading-0)\\n\\n### 初始化项目\\n创建文件夹并初始化：\\n\",\"title\":\"轻轻松松开发一个VUE插件并发布到npm\",\"date\":\"2019.05.06\",\"cate\":\"1\"},{\"tags\":\"Web Components\",\"id\":\"4d8099be25abb6b468172d250bc4f277\",\"path\":\"/publishers/Web Components/WebComponents初识.md\",\"outline\":\"&lt;!--title: Web Components 之初识--&gt;\\n&lt;!--date: 2019.6.24--&gt;\\n&lt;!--cate: 1--&gt;\\n\\n## 发展史\\n&gt; 关于发展史，可以看看廖雪峰大大的[MVVM 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001475449022563a6591e6373324d1abd93e0e3fa04397f000)文章，是从前端的发展史开始讲到mvvm的，能让我们很好的理解前端的发胀，以及思考web Components相对于以前的开发方式有什么不同。\\n\\n### 原生JS和jQuery\\n最早，html页面是完全静态的，只需要编写好html文件放到Web服务器上即可。\\n\\n\",\"title\":\"Web Components 之初识\",\"date\":\"2019.6.24\",\"cate\":\"1\"},{\"tags\":\"Web Components\",\"id\":\"f7331174a163c3972f78892cc42fd118\",\"path\":\"/publishers/Web Components/WebComponents实践.md\",\"outline\":\"&lt;!--title: Web Components 之实践--&gt;\\n&lt;!--date: 2019.7.1--&gt;\\n&lt;!--cate: 1--&gt;\\n在上一篇中学习了一些 Web Components 的基本概念（[WebComponents初识](./WebComponents初识.md)），这一篇主要是实践一下怎么使用 Web Components 的API。\\n\\n## 自定义元素\\n首先，这里实现一个 WordCount 自定义标签的例子，用于统计当前标签的字数，在当前标签最后标识字数。\\n\\n核心代码如下，创建了一个 WordCount 的类，继承于&#x60;HTMLElement&#x60;，然后在里面添加了一个内容为字数的 span 标签，并添加到当前元素的最后。\\n\\n\",\"title\":\"Web Components 之实践\",\"date\":\"2019.7.1\",\"cate\":\"1\"}]}");
 
 /***/ }),
 /* 12 */,
@@ -535,7 +550,7 @@ var vue_runtime_min = __webpack_require__(2);
 var vue_runtime_min_default = /*#__PURE__*/__webpack_require__.n(vue_runtime_min);
 
 // EXTERNAL MODULE: ./node_modules/vue-router/dist/vue-router.esm.js
-var vue_router_esm = __webpack_require__(9);
+var vue_router_esm = __webpack_require__(10);
 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/App.vue?vue&type=template&id=98bf6140&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"app"}},[_c('div',{attrs:{"id":"back-to-top"}}),_vm._v(" "),_c('header-auto-up-down',[_c('navigation',{attrs:{"navs":_vm.navs}},[_c('div',{staticClass:"search-wrap"},[_c('input',{staticClass:"search-input",on:{"keyup":function($event){if(!$event.type.indexOf('key')&&_vm._k($event.keyCode,"enter",13,$event.key,"Enter")){ return null; }return _vm.search($event)},"input":_vm.filterChange}}),_vm._v(" "),_c('span',{on:{"click":_vm.search}},[_c('svg',{staticClass:"icon search-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-search"}})])])])])],1),_vm._v(" "),_c('router-view')],1)}
@@ -852,20 +867,20 @@ var App_component = Object(componentNormalizer["a" /* default */])(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/router.js
-const Home = () => __webpack_require__.e(/* import() | home */ 4).then(__webpack_require__.bind(null, 62));
+const Home = () => __webpack_require__.e(/* import() | home */ 4).then(__webpack_require__.bind(null, 63));
 
-const Timeline = () => __webpack_require__.e(/* import() | timeline */ 16).then(__webpack_require__.bind(null, 57));
+const Timeline = () => __webpack_require__.e(/* import() | timeline */ 16).then(__webpack_require__.bind(null, 58));
 
-const Category = () => __webpack_require__.e(/* import() | category */ 1).then(__webpack_require__.bind(null, 58));
+const Category = () => __webpack_require__.e(/* import() | category */ 1).then(__webpack_require__.bind(null, 59));
 
-const MessageBoard = () => __webpack_require__.e(/* import() | message */ 7).then(__webpack_require__.bind(null, 59));
+const MessageBoard = () => __webpack_require__.e(/* import() | message */ 7).then(__webpack_require__.bind(null, 60));
 
-const Friends = () => __webpack_require__.e(/* import() | friends */ 3).then(__webpack_require__.bind(null, 61)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
+const Friends = () => __webpack_require__.e(/* import() | friends */ 3).then(__webpack_require__.bind(null, 62)); // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 
 
-const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 18).then(__webpack_require__.bind(null, 56));
+const YeahMe = () => __webpack_require__.e(/* import() | yeahMe */ 18).then(__webpack_require__.bind(null, 57));
 
-const Detail = () => __webpack_require__.e(/* import() | detail */ 2).then(__webpack_require__.bind(null, 60));
+const Detail = () => __webpack_require__.e(/* import() | detail */ 2).then(__webpack_require__.bind(null, 61));
 
 /* harmony default export */ var router = ({
   mode: 'hash',
@@ -916,13 +931,13 @@ const Detail = () => __webpack_require__.e(/* import() | detail */ 2).then(__web
   }]
 });
 // EXTERNAL MODULE: ./node_modules/vuex/dist/vuex.esm.js
-var vuex_esm = __webpack_require__(8);
+var vuex_esm = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./blog.json
 var blog = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/utils/tools.js
-var tools = __webpack_require__(10);
+var tools = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./src/store/index.js
 
@@ -931,7 +946,9 @@ var tools = __webpack_require__(10);
 
 vue_runtime_min_default.a.use(vuex_esm["a" /* default */]);
 let store_blog = blog.blog;
-store_blog = store_blog.sort((small, big) => +new Date(big.date) - +new Date(small.date));
+store_blog = store_blog.sort((small, big) => +new Date(big.date) - +new Date(small.date)).map(i => ({ ...i,
+  title: Object(tools["a" /* escape2Html */])(i.title)
+}));
 const category = Array.from(new Set(store_blog.map(i => i.tags))).map(tag => ({
   blog: store_blog.filter(i => i.tags === tag),
   tag
@@ -943,28 +960,13 @@ const state = {
   countBlog: store_blog.length,
   countCategory: category.length
 };
-
-function escape2Html(str) {
-  let arrEntities = {
-    'lt': '<',
-    'gt': '>',
-    'nbsp': ' ',
-    'amp': '&',
-    'quot': '"',
-    '#x60': '`'
-  };
-  return str.replace(/&(lt|gt|nbsp|amp|quot|#x60);/ig, function (all, t) {
-    return arrEntities[t];
-  });
-}
-
 const actions = {
   getBlogContent({
     commit
   }, search = '') {
     const reg = new RegExp(search, 'i');
     const blogWithContent = (search ? store_blog.filter(i => reg.test(i.title) || reg.test(i.tags)) : store_blog).map(b => ({ ...b,
-      ...Object(tools["a" /* formatByMarked */])(escape2Html(b.outline))
+      ...Object(tools["b" /* formatByMarked */])(Object(tools["a" /* escape2Html */])(b.outline))
     }));
     commit('SET_ALL', blogWithContent);
   }

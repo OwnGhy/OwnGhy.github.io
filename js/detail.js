@@ -19,28 +19,32 @@ var map = {
 		49,
 		10
 	],
-	"./React/React单元测试记录之Jest 与 Enzyme.md": [
+	"./JS/用过 ≠ 掌握之文件上传.md": [
 		50,
+		10
+	],
+	"./React/React单元测试记录之Jest 与 Enzyme.md": [
+		51,
 		11
 	],
 	"./React/TS_DVA_Build.md": [
-		51,
+		52,
 		12
 	],
 	"./Vue/Build_A_Vue_Project.md": [
-		52,
+		53,
 		13
 	],
 	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
-		53,
+		54,
 		14
 	],
 	"./Web Components/WebComponents初识.md": [
-		54,
+		55,
 		15
 	],
 	"./Web Components/WebComponents实践.md": [
-		55,
+		56,
 		15
 	]
 };
@@ -77,7 +81,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 60:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91,7 +95,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=7c0e108a&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
-var tools = __webpack_require__(10);
+var tools = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=script&lang=js&
 //
@@ -136,7 +140,7 @@ var tools = __webpack_require__(10);
 //
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 65));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 66));
 
 /* harmony default export */ var Detailvue_type_script_lang_js_ = ({
   name: 'detail',
@@ -153,7 +157,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
   methods: {
     async getDetail(path) {
       let md = await __webpack_require__(40)(`./${path.split('/publishers/')[1]}`);
-      return Object(tools["a" /* formatByMarked */])(md.default);
+      return Object(tools["b" /* formatByMarked */])(md.default);
     },
 
     backToTop() {

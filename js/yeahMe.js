@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[18],{
 
-/***/ 56:
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,7 @@ var staticRenderFns = []
 // CONCATENATED MODULE: ./src/pages/YeahMe.vue?vue&type=template&id=363c65bb&
 
 // EXTERNAL MODULE: ./node_modules/marked/lib/marked.js
-var marked = __webpack_require__(7);
+var marked = __webpack_require__(8);
 var marked_default = /*#__PURE__*/__webpack_require__.n(marked);
 
 // CONCATENATED MODULE: ./src/assets/yeahme.md
@@ -28,7 +28,7 @@ var marked_default = /*#__PURE__*/__webpack_require__.n(marked);
 
 
 
-const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 63));
+const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 64));
 
 marked_default.a.setOptions({
   gfm: true,
