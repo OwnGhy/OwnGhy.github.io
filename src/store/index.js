@@ -1,12 +1,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import blogs from './../../blog.json';
-import {formatByMarked} from "@utils/tools";
+import {formatByMarked, escape2Html} from "@utils/tools";
 
 Vue.use(Vuex);
 
 let blog = blogs.blog;
-blog = blog.sort((small, big) => +new Date(big.date) - +new Date(small.date));
+blog = blog.sort((small, big) => +new Date(big.date) - +new Date(small.date)).map(i => ({
+    ...i,
+    title: escape2Html(i.title)
+}));
 const category = Array.from(new Set(blog.map(i => i.tags))).map(tag => ({
     blog: blog.filter(i => i.tags === tag),
     tag
@@ -19,13 +22,6 @@ const state = {
     countBlog: blog.length,
     countCategory: category.length
 };
-
-function escape2Html(str) {
-    let arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"', '#x60': '`'};
-    return str.replace(/&(lt|gt|nbsp|amp|quot|#x60);/ig,function(all,t){
-        return arrEntities[t];
-    });
-}
 
 const actions = {
     getBlogContent({ commit }, search = '') {
