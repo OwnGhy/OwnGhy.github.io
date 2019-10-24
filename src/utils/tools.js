@@ -89,3 +89,10 @@ export const getMonthDate = (date) => {
 
     return `${month > 9 ? '' : '0'}${month}.${day > 9 ? '' : '0'}${day}`
 };
+
+export const escape2Html = (str) => {
+    let arrEntities={'lt':'<','gt':'>','nbsp':' ','amp':'&','quot':'"', '#x60': '`', '#x3D': '≠'};
+    return str.replace(/&(lt|gt|nbsp|amp|quot|#x60|#x3D);/ig,function(all,t){
+        return arrEntities[t];
+    });
+}
