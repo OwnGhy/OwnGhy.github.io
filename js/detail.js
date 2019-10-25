@@ -23,28 +23,32 @@ var map = {
 		50,
 		10
 	],
-	"./React/React单元测试记录之Jest 与 Enzyme.md": [
+	"./JS/移动端开发适配.md": [
 		51,
+		10
+	],
+	"./React/React单元测试记录之Jest 与 Enzyme.md": [
+		52,
 		11
 	],
 	"./React/TS_DVA_Build.md": [
-		52,
+		53,
 		12
 	],
 	"./Vue/Build_A_Vue_Project.md": [
-		53,
+		54,
 		13
 	],
 	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
-		54,
+		55,
 		14
 	],
 	"./Web Components/WebComponents初识.md": [
-		55,
+		56,
 		15
 	],
 	"./Web Components/WebComponents实践.md": [
-		56,
+		57,
 		15
 	]
 };
@@ -81,7 +85,7 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 61:
+/***/ 64:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -140,7 +144,7 @@ var tools = __webpack_require__(7);
 //
 
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 66));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 62));
 
 /* harmony default export */ var Detailvue_type_script_lang_js_ = ({
   name: 'detail',
