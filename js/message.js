@@ -7,7 +7,7 @@
 
 /***/ }),
 
-/***/ 37:
+/***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 61:
+/***/ 68:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -43,7 +43,7 @@ var staticRenderFns = []
 //
 //
 //
-const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 66));
+const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).then(__webpack_require__.bind(null, 69));
 
 /* harmony default export */ var MessageBoardvue_type_script_lang_js_ = ({
   name: 'message_board',
@@ -75,7 +75,7 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).t
 // CONCATENATED MODULE: ./src/pages/MessageBoard.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_MessageBoardvue_type_script_lang_js_ = (MessageBoardvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./src/pages/MessageBoard.vue?vue&type=style&index=0&lang=less&
-var MessageBoardvue_type_style_index_0_lang_less_ = __webpack_require__(37);
+var MessageBoardvue_type_style_index_0_lang_less_ = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);

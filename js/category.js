@@ -7,7 +7,7 @@
 
 /***/ }),
 
-/***/ 36:
+/***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 62:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,7 +52,7 @@ var staticRenderFns = []
 //
 //
 //
-const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 67));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 70));
 
 const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 63));
 
@@ -72,7 +72,7 @@ const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-lay
 // CONCATENATED MODULE: ./src/pages/Category.vue?vue&type=script&lang=js&
  /* harmony default export */ var pages_Categoryvue_type_script_lang_js_ = (Categoryvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./src/pages/Category.vue?vue&type=style&index=0&lang=less&
-var Categoryvue_type_style_index_0_lang_less_ = __webpack_require__(36);
+var Categoryvue_type_style_index_0_lang_less_ = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 var componentNormalizer = __webpack_require__(0);
