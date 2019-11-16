@@ -6,6 +6,7 @@ const Friends = () => import(/* webpackChunkName: "friends" */'./pages/Friends.v
 // const Hobby = () => import(/* webpackChunkName: "hobby" */'./pages/Hobby.vue');
 const YeahMe = () => import(/* webpackChunkName: "yeahMe" */'./pages/YeahMe.vue');
 const Detail = () => import(/* webpackChunkName: "detail" */'./pages/Detail.vue');
+const Progressive = () => import(/* webpackChunkName: "detail" */'./pages/Display/Progressive.vue');
 
 export default {
     mode: 'hash',
@@ -61,6 +62,12 @@ export default {
             key: 'detail',
             name: 'detail',
             component: Detail
+        },
+        {
+            path: '/display/progressive',
+            key: 'progressive',
+            name: 'progressive',
+            component: Progressive
         }
     ]
 }

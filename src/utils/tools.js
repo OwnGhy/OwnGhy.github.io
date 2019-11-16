@@ -96,3 +96,30 @@ export const escape2Html = (str) => {
         return arrEntities[t];
     });
 }
+
+// 节流
+export const throttle = (fn, delay) => {
+    let canRun = true;
+    return function() {
+        if (!canRun) return;
+
+        canRun = false;
+
+        setTimeout(() => {
+            fn(arguments);
+            canRun = true;
+        }, delay);
+    }
+}
+
+// 防抖
+export const debounce = (fn, delay) => {
+    let timer = null;
+    return function() {
+        clearTimeout(timeout);
+
+        timer = setTimeout(() => {
+            fn(arguments);
+        }, delay);
+    }
+}

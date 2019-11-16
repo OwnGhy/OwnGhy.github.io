@@ -27,6 +27,24 @@
             "cate": "1"
         },
         {
+            "tags": "JS",
+            "id": "33f38c9744282a3007c859346b4eaaa9",
+            "path": "/publishers/JS/移动端开发适配.md",
+            "outline": "&lt;!--title: 移动端开发适配--&gt;\n&lt;!--date: 2019.10.24--&gt;\n&lt;!--cate: 1--&gt;\n很久没有开发移动端了，回顾一下。\n\n### viewport\n\n&#x60;viewport&#x60;代表当前可见的计算机图形区域，即&#x60;viewport&#x60;是当前文档的可见部分。\n\n&#x60;viewport&#x60;参数：\n\n- width：控制视口的宽度，数字 or &#x60;device-width&#x60;这种特殊值，表示&#x60;viewport&#x60;的宽度是设备的宽度\n- height：同width\n- initial-scale：控制页面最初加载时的缩放等级\n- user-scalable：控制是否可以缩放页面\n- maximum-scale：允许用户缩放到的最大比例\n- minimum-scale：反之\n\n",
+            "title": "移动端开发适配",
+            "date": "2019.10.24",
+            "cate": "1"
+        },
+        {
+            "tags": "Nginx",
+            "id": "da9ded44cb3f05beaad23b243d6fea01",
+            "path": "/publishers/Nginx/Nginx 学习与实践.md",
+            "outline": "&lt;!--title: Nginx 学习与实践--&gt;\n&lt;!--date: 2019.10.29--&gt;\n&lt;!--cate: 1--&gt;\nnginx 平时经常听到，但是目前还没有使用过，也没理解过其中的含义。\n\n### 概念\n\n首先，nginx 是一款轻量级的 web 服务器、反向代理服务器，由于它内存占用少，启动快且高并发能力强，经常在互联网项目中广泛应用。\n\n关键词：反向代理？什么是反向代理？\n\n",
+            "title": "Nginx 学习与实践",
+            "date": "2019.10.29",
+            "cate": "1"
+        },
+        {
             "tags": "React",
             "id": "6ae934fb4985084841c7ad571205ce76",
             "path": "/publishers/React/React单元测试记录之Jest 与 Enzyme.md",
