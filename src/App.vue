@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div id="back-to-top"></div>
-        <header-auto-up-down>
+        <header-auto-up-down v-if="!isDisplay">
             <navigation :navs="navs">
                 <div class="search-wrap">
                     <input @keyup.enter="search" @input="filterChange" class="search-input" />
@@ -24,6 +24,11 @@
         components: {
             HeaderAutoUpDown,
             Navigation
+        },
+        computed: {
+            isDisplay() {
+                return window.location.hash.includes('display');
+            }
         },
         data() {
             return {
@@ -61,6 +66,11 @@
                                 title: 'md-info-generator',
                                 key: 'md-info-generator',
                                 url: 'https://github.com/OwnGhy/md-info-generator'
+                            },
+                            {
+                                title: '渐进式图片',
+                                key: 'progressive',
+                                url: 'https://sycamore.fun/#/display/progressive'
                             }
                         ]
                     },
