@@ -2,7 +2,7 @@
     <div class="container">
         <header>
             <div class="brand-wrapper">
-                <img id="brand-img" :src="brandImg" />
+                <img class="preview" id="brand-img" :src="brandImg" />
                 <div class="brand">
                     <h1>Sycamore</h1>
                 </div>
@@ -23,7 +23,7 @@
     </div>
 </template>
 <script>
-    import brand from '@assets/swim.jpg';
+    import brand_r from '@assets/swim_r.jpg';
     import avatar from '@assets/avatar.jpeg';
 
     const LeftRightLayout = () => import(/* webpackChunkName: "left-right-layout" */'./LeftRightLayout.vue');
@@ -42,8 +42,16 @@
             };
         },
         mounted() {
-            this.brandImg = brand;
+            this.brandImg = brand_r;
             this.avatarImg = avatar;
+            this.$nextTick(() => {
+                const img = new Image();
+                img.src = 'https://raw.githubusercontent.com/OwnGhy/Jotting/master/assets/OnePiece/swim.jpg';
+                img.onload = () => {
+                    this.brandImg = 'https://raw.githubusercontent.com/OwnGhy/Jotting/master/assets/OnePiece/swim.jpg';
+                    document.getElementById('brand-img').className = '';
+                };
+            });
         }
     }
 </script>
@@ -63,6 +71,10 @@
                 width: 100%;
                 height: 100%;
                 z-index: 1;
+            }
+
+            .preview {
+                filter: blur(1vw);
             }
 
             .brand {
