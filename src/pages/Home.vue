@@ -56,9 +56,9 @@
             }
         },
         mounted() {
-            setTimeout(() => {
+            this.$nextTick(() => {
                 document.getElementById('main').scrollIntoView();
-            }, 300);
+            });
         },
         methods: {
             prev() {

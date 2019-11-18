@@ -26,9 +26,9 @@
             HomeLayout
         },
         mounted() {
-            setTimeout(() => {
+            this.$nextTick(() => {
                 document.getElementById('main').scrollIntoView();
-            }, 300);
+            });
         },
         data() {
             return {
