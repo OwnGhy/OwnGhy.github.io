@@ -18,11 +18,9 @@
             HomeLayout
         },
         mounted() {
-            setTimeout(() => {
+            this.$nextTick(() => {
                 document.getElementById('main').scrollIntoView();
-            }, 300);
 
-            setTimeout(() => {
                 // 初始化 gitalk
                 const gitalk = new Gitalk({
                     clientID: '9df6ba9180805813015e',
@@ -35,7 +33,7 @@
                 });
 
                 gitalk.render('comment-wrap');
-            }, 1000);
+            });
         }
     }
 </script>

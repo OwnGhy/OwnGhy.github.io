@@ -67,11 +67,11 @@
         mounted() {
             window.onload = () => {
                 // 首屏
-                setTimeout(() => {
+                this.$nextTick(() => {
                     this.checkImage();
 
                     window.addEventListener('scroll', this.throttleCheckImage);
-                }, 0);
+                });
             }
         },
         methods: {
