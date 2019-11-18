@@ -113,12 +113,12 @@ module.exports = webpackAsyncContext;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Display/Progressive.vue?vue&type=template&id=679ae428&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Display/Progressive.vue?vue&type=template&id=18afbc27&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"progressive"},_vm._l((_vm.imgs),function(p){return _c('div',{staticClass:"progressive-item"},[_c('p',[_vm._v(_vm._s(p.title))]),_vm._v(" "),_c('div',{staticClass:"preview-wrap"},[_c('img',{staticClass:"preview lazy",attrs:{"data-src":p.url,"src":p.compressedUrl}})])])}),0)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Display/Progressive.vue?vue&type=template&id=679ae428&
+// CONCATENATED MODULE: ./src/pages/Display/Progressive.vue?vue&type=template&id=18afbc27&
 
 // EXTERNAL MODULE: ./src/utils/tools.js
 var tools = __webpack_require__(4);
@@ -184,10 +184,10 @@ var tools = __webpack_require__(4);
   mounted() {
     window.onload = () => {
       // 首屏
-      setTimeout(() => {
+      this.$nextTick(() => {
         this.checkImage();
         window.addEventListener('scroll', this.throttleCheckImage);
-      }, 0);
+      });
     };
   },
 

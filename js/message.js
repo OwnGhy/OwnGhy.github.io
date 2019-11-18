@@ -24,12 +24,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/MessageBoard.vue?vue&type=template&id=5fc53a49&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/MessageBoard.vue?vue&type=template&id=7507993e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('home-layout',[_c('div',{attrs:{"slot":"content"},slot:"content"},[_c('div',{staticClass:"card message-desc"},[_c('p',[_vm._v("有个同学说要来给我喊 666，所以加了个留言板，hhhhhh～😜")]),_vm._v(" "),_c('p',[_vm._v("当然，希望大家一起来讨论或者是给我提意见才是正经的～")])]),_vm._v(" "),_c('div',{staticClass:"card",attrs:{"id":"comment-wrap"}})])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/MessageBoard.vue?vue&type=template&id=5fc53a49&
+// CONCATENATED MODULE: ./src/pages/MessageBoard.vue?vue&type=template&id=7507993e&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/MessageBoard.vue?vue&type=script&lang=js&
 //
@@ -52,11 +52,9 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).t
   },
 
   mounted() {
-    setTimeout(() => {
-      document.getElementById('main').scrollIntoView();
-    }, 300);
-    setTimeout(() => {
-      // 初始化 gitalk
+    this.$nextTick(() => {
+      document.getElementById('main').scrollIntoView(); // 初始化 gitalk
+
       const gitalk = new Gitalk({
         clientID: '9df6ba9180805813015e',
         clientSecret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
@@ -68,7 +66,7 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).t
 
       });
       gitalk.render('comment-wrap');
-    }, 1000);
+    });
   }
 
 });

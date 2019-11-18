@@ -31,12 +31,12 @@ module.exports = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBYRXhpZgA
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Friends.vue?vue&type=template&id=7e3b6418&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Friends.vue?vue&type=template&id=517cd540&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('home-layout',[_c('div',{staticClass:"friends-container card",attrs:{"slot":"content"},slot:"content"},[_c('div',{staticClass:"friends-wrapper"},_vm._l((_vm.friends),function(f){return _c('a',{staticClass:"friends-item",attrs:{"href":f.site,"target":"_blank"}},[_c('img',{staticClass:"friends-avatar",attrs:{"src":f.avatar}}),_vm._v(" "),_c('div',{staticClass:"friends-text"},[_c('span',{staticClass:"friends-name"},[_vm._v(_vm._s(f.name))]),_vm._v(" "),_c('p',{staticClass:"friends-motto"},[_vm._v(_vm._s(f.motto))])])])}),0),_vm._v(" "),_c('p',{staticClass:"friends-extra"},[_vm._v("新胖友们，请到"),_c('router-link',{attrs:{"to":"/message"}},[_vm._v("留言板")]),_vm._v("备注信息哟～")],1)])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/Friends.vue?vue&type=template&id=7e3b6418&
+// CONCATENATED MODULE: ./src/pages/Friends.vue?vue&type=template&id=517cd540&
 
 // EXTERNAL MODULE: ./src/assets/friends/wangzi.jpeg
 var wangzi = __webpack_require__(39);
@@ -71,9 +71,9 @@ const HomeLayout = () => __webpack_require__.e(/* import() | home-layout */ 5).t
   },
 
   mounted() {
-    setTimeout(() => {
+    this.$nextTick(() => {
       document.getElementById('main').scrollIntoView();
-    }, 300);
+    });
   },
 
   data() {

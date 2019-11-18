@@ -6,12 +6,12 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/YeahMe.vue?vue&type=template&id=363c65bb&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/YeahMe.vue?vue&type=template&id=40e95a85&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('home-layout',[_c('div',{staticClass:"card markdown-container",attrs:{"slot":"content"},domProps:{"innerHTML":_vm._s(_vm.yeahmeMd)},slot:"content"})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/pages/YeahMe.vue?vue&type=template&id=363c65bb&
+// CONCATENATED MODULE: ./src/pages/YeahMe.vue?vue&type=template&id=40e95a85&
 
 // EXTERNAL MODULE: ./node_modules/marked/lib/marked.js
 var marked = __webpack_require__(8);
@@ -52,9 +52,9 @@ marked_default.a.setOptions({
   },
 
   mounted() {
-    setTimeout(() => {
+    this.$nextTick(() => {
       document.getElementById('main').scrollIntoView();
-    }, 300);
+    });
   }
 
 });
