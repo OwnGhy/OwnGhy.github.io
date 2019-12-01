@@ -18,7 +18,7 @@
 
 /***/ }),
 
-/***/ 67:
+/***/ 65:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52,9 +52,9 @@ var staticRenderFns = []
 //
 //
 //
-const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 70));
+const Overview = () => __webpack_require__.e(/* import() | overview */ 8).then(__webpack_require__.bind(null, 71));
 
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 63));
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 72));
 
 /* harmony default export */ var Categoryvue_type_script_lang_js_ = ({
   name: 'category',

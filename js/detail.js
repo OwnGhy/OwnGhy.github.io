@@ -20,47 +20,51 @@
 var map = {
 	"./Babel/Babel理解.md": [
 		50,
-		9
+		10
 	],
 	"./JS/正则实用技巧记录.md": [
 		51,
-		10
+		11
 	],
 	"./JS/用过 ≠ 掌握之文件上传.md": [
 		52,
-		10
+		11
 	],
 	"./JS/移动端开发适配.md": [
 		53,
-		10
+		11
 	],
 	"./Nginx/Nginx 学习与实践.md": [
 		54,
-		11
+		12
 	],
 	"./React/React单元测试记录之Jest 与 Enzyme.md": [
 		55,
-		12
+		13
 	],
 	"./React/TS_DVA_Build.md": [
 		56,
-		13
+		14
 	],
 	"./Vue/Build_A_Vue_Project.md": [
 		57,
-		14
+		15
 	],
 	"./Vue/轻轻松松开发一个VUE插件并发布到npm.md": [
 		58,
-		15
+		16
 	],
 	"./Web Components/WebComponents初识.md": [
 		59,
-		16
+		17
 	],
 	"./Web Components/WebComponents实践.md": [
 		60,
-		16
+		17
+	],
+	"./面经/2019 年底-头条面经.md": [
+		61,
+		9
 	]
 };
 function webpackAsyncContext(req) {
@@ -107,7 +111,159 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 62:
+/***/ 68:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=78401642&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"detail-container"},[_c('left-right-layout',{attrs:{"affix":""}},[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"blog-title"},[_c('h2',{staticClass:"title"},[_vm._v(_vm._s(_vm.detail.title))]),_vm._v(" "),_c('div',{staticClass:"info-wrap"},[_c('span',{staticClass:"date"},[_c('svg',{staticClass:"clock-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-clock"}})]),_vm._v("\n                            "+_vm._s(_vm.detail.date)+"\n                        ")]),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v("\n                            "+_vm._s(_vm.detail.tags)+"\n                        ")])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"markdown-container",domProps:{"innerHTML":_vm._s(_vm.detail.content)}}):_vm._e()]),_vm._v(" "),_c('div',{attrs:{"id":"comment-wrap"}}),_vm._v(" "),_c('div',{staticClass:"fix-tool"},[_c('span',{on:{"click":_vm.backToTop}},[_c('svg',{staticClass:"back-top",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-top"}})])]),_vm._v(" "),_c('div',{staticClass:"to-comment",on:{"click":_vm.toComment}},[_c('svg',{staticClass:"comment-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-comment1"}})])])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"toc",attrs:{"slot":"right"},domProps:{"innerHTML":_vm._s(_vm.detail.tocHtml)},slot:"right"}):_vm._e()])],1)}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=78401642&
+
+// EXTERNAL MODULE: ./src/utils/tools.js
+var tools = __webpack_require__(4);
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 72));
+
+/* harmony default export */ var Detailvue_type_script_lang_js_ = ({
+  name: 'detail',
+  components: {
+    LeftRightLayout
+  },
+
+  data() {
+    return {
+      detail: {}
+    };
+  },
+
+  methods: {
+    async getDetail(path) {
+      let md = await __webpack_require__(41)(`./${path.split('/publishers/')[1]}`);
+      return Object(tools["b" /* formatByMarked */])(md.default);
+    },
+
+    backToTop() {
+      document.getElementById('back-to-top').scrollIntoView();
+    },
+
+    toComment() {
+      document.getElementById('comment-wrap').scrollIntoView();
+    }
+
+  },
+
+  mounted() {
+    window.addEventListener('click', e => {
+      if (e.target.className === 'anchor-item') {
+        document.getElementById(e.target.dataset.id).scrollIntoView();
+      }
+    });
+    document.documentElement.scrollTop = 0;
+    let detail = this.$store.state.blogWithContent.find(b => b.id === this.$route.params.id);
+    this.getDetail(detail.path).then(res => {
+      this.detail = { ...detail,
+        ...res
+      }; // 初始化 gitalk
+
+      const gitalk = new Gitalk({
+        clientID: '9df6ba9180805813015e',
+        clientSecret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
+        repo: 'OwnGhy.github.io',
+        owner: 'OwnGhy',
+        admin: ['OwnGhy'],
+        id: this.detail.id,
+        distractionFreeMode: false // Facebook-like distraction free mode
+
+      });
+      gitalk.render('comment-wrap');
+    });
+    document.title = `${detail.title} - Sycamore`;
+    const keywords = document.querySelector("meta[name=keywords]");
+    keywords.setAttribute('content', `Sycamore,blog,${detail.tags}`);
+  }
+
+});
+// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=script&lang=js&
+ /* harmony default export */ var pages_Detailvue_type_script_lang_js_ = (Detailvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/pages/Detail.vue?vue&type=style&index=0&lang=less&
+var Detailvue_type_style_index_0_lang_less_ = __webpack_require__(42);
+
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./src/pages/Detail.vue
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(componentNormalizer["a" /* default */])(
+  pages_Detailvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Detail = __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -248,158 +404,6 @@ var component = Object(componentNormalizer["a" /* default */])(
 )
 
 /* harmony default export */ var Progressive = __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ 66:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=template&id=7c0e108a&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"detail-container"},[_c('left-right-layout',{attrs:{"affix":""}},[_c('div',{attrs:{"slot":"left"},slot:"left"},[_c('div',{staticClass:"card"},[_c('div',{staticClass:"blog-title"},[_c('h2',{staticClass:"title"},[_vm._v(_vm._s(_vm.detail.title))]),_vm._v(" "),_c('div',{staticClass:"info-wrap"},[_c('span',{staticClass:"date"},[_c('svg',{staticClass:"clock-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-clock"}})]),_vm._v("\n                            "+_vm._s(_vm.detail.date)+"\n                        ")]),_vm._v(" "),_c('span',{staticClass:"tag"},[_vm._v("\n                            "+_vm._s(_vm.detail.tags)+"\n                        ")])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"markdown-container",domProps:{"innerHTML":_vm._s(_vm.detail.content)}}):_vm._e()]),_vm._v(" "),_c('div',{attrs:{"id":"comment-wrap"}}),_vm._v(" "),_c('div',{staticClass:"fix-tool"},[_c('span',{on:{"click":_vm.backToTop}},[_c('svg',{staticClass:"back-top",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-top"}})])]),_vm._v(" "),_c('div',{staticClass:"to-comment",on:{"click":_vm.toComment}},[_c('svg',{staticClass:"comment-icon",attrs:{"aria-hidden":"true"}},[_c('use',{attrs:{"xlink:href":"#icon-comment1"}})])])])]),_vm._v(" "),(_vm.detail)?_c('div',{staticClass:"toc",attrs:{"slot":"right"},domProps:{"innerHTML":_vm._s(_vm.detail.tocHtml)},slot:"right"}):_vm._e()])],1)}
-var staticRenderFns = []
-
-
-// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=template&id=7c0e108a&
-
-// EXTERNAL MODULE: ./src/utils/tools.js
-var tools = __webpack_require__(4);
-
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/pages/Detail.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-const LeftRightLayout = () => __webpack_require__.e(/* import() | left-right-layout */ 6).then(__webpack_require__.bind(null, 63));
-
-/* harmony default export */ var Detailvue_type_script_lang_js_ = ({
-  name: 'detail',
-  components: {
-    LeftRightLayout
-  },
-
-  data() {
-    return {
-      detail: {}
-    };
-  },
-
-  methods: {
-    async getDetail(path) {
-      let md = await __webpack_require__(41)(`./${path.split('/publishers/')[1]}`);
-      return Object(tools["b" /* formatByMarked */])(md.default);
-    },
-
-    backToTop() {
-      document.getElementById('back-to-top').scrollIntoView();
-    },
-
-    toComment() {
-      document.getElementById('comment-wrap').scrollIntoView();
-    }
-
-  },
-
-  mounted() {
-    window.addEventListener('click', e => {
-      if (e.target.className === 'anchor-item') {
-        document.getElementById(e.target.dataset.id).scrollIntoView();
-      }
-    });
-    document.documentElement.scrollTop = 0;
-    let detail = this.$store.state.blogWithContent.find(b => b.id === this.$route.params.id);
-    this.getDetail(detail.path).then(res => {
-      this.detail = { ...detail,
-        ...res
-      }; // 初始化 gitalk
-
-      const gitalk = new Gitalk({
-        clientID: '9df6ba9180805813015e',
-        clientSecret: '49ebf141c03115c93550de2dc7d70876428e7c3e',
-        repo: 'OwnGhy.github.io',
-        owner: 'OwnGhy',
-        admin: ['OwnGhy'],
-        id: this.detail.id,
-        distractionFreeMode: false // Facebook-like distraction free mode
-
-      });
-      gitalk.render('comment-wrap');
-    });
-    document.title = `${detail.title} - Sycamore`;
-    const keywords = document.querySelector("meta[name=keywords]");
-    keywords.setAttribute('content', `Sycamore,blog,${detail.tags}`);
-  }
-
-});
-// CONCATENATED MODULE: ./src/pages/Detail.vue?vue&type=script&lang=js&
- /* harmony default export */ var pages_Detailvue_type_script_lang_js_ = (Detailvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/pages/Detail.vue?vue&type=style&index=0&lang=less&
-var Detailvue_type_style_index_0_lang_less_ = __webpack_require__(42);
-
-// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
-var componentNormalizer = __webpack_require__(0);
-
-// CONCATENATED MODULE: ./src/pages/Detail.vue
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(componentNormalizer["a" /* default */])(
-  pages_Detailvue_type_script_lang_js_,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* harmony default export */ var Detail = __webpack_exports__["default"] = (component.exports);
 
 /***/ })
 
