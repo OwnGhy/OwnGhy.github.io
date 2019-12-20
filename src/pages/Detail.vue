@@ -142,6 +142,8 @@
         }
 
         .toc {
+            max-height: 440px;
+            overflow: auto;
             ul {
                 padding-left: 20px;
                 margin: 0;
