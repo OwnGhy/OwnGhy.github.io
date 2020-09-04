@@ -17,7 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "highlight.js": "^9.15.8",
-    "marked": "^0.6.2",
+    "marked": "^1.1.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.1",
